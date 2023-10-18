@@ -15,7 +15,8 @@ The annotation of images and the setup of the train-test split were accomplished
 The detection model was trained using Google Colab, a cloud-based platform, through 10,000 iterations. This training process utilized the darknet architecture of YOLOv4-Tiny, leading to the creation of configuration (cfg), weights, and name files for the model.
 
 - Google Collab Training Notebook: https://colab.research.google.com/drive/17oU-cuJcYoama6hatZi_CREhWnAqBPbl?usp=sharing
-  **The attached dataset in the notebook can be utilized for training other detection models based on Darknet.**
+
+- The attached dataset in the notebook can be utilized for training other detection models based on Darknet.
 
 ## Phots Results
 
