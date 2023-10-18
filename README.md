@@ -18,6 +18,9 @@ Google Colab, a cloud-based platform, was utilized during the training process o
 ## Phots Results
 
 <p align="center"> 
-  <img src="https://user-images.githubusercontent.com/97860488/221027525-6e94f1a6-ceb2-4aac-9ea8-de85c1d312c3.PNG" height= "200"/> <img src="https://user-images.githubusercontent.com/97860488/221027527-a28a3d89-a600-4375-9def-043eb58dd41a.PNG" height= "200"/>
- <img src="https://user-images.githubusercontent.com/97860488/221027509-fbf21184-b47b-405a-b738-b0e21af380d1.PNG" height= "200"/> <img src="https://user-images.githubusercontent.com/97860488/221027499-da13a9b1-4ab6-4b05-9d3f-cac1cbe3298e.PNG" height= "200"/>
+  <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/1.JPG?raw=true" height= "200"/>
+   <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/2.png?raw=true" height= "200"/>
+ <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/3.png?raw=true" height= "200"/> 
 </p>
+
+<img src="https://raw.githubusercontent.com/sulimanbadour1/Sul_folio/main/src/assets/logos/white.png" width='100px'/>
