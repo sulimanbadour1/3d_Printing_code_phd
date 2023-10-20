@@ -14,35 +14,21 @@ with open(filename, "a") as f:
     f.write("\nSession: " + date + timestr + "\n")
 print("Initializing Data Output")
 
-# Camera Initialization
-cam = cv2.VideoCapture(0)
-
 # Yolo Files Initalization
 folderpath = "pyCode\Models\obj.names"
-# folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
 
-# modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
 modelConfiguration = "pyCode\Models\custom-yolov4-tiny-detector.cfg"
-# modelWeight = (
-#     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
-# )
 modelWeight = "pyCode\Models\custom-yolov4-tiny-detector_best.weights"
-model = cv2.dnn.readNetFromDarknet(
-    modelConfiguration, modelWeight
-)  # Loading of YOLO Models
+model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
 
 # To run YOLO Models on GPU
-model.setPreferableBackend(
-    cv2.dnn.DNN_BACKEND_CUDA
-)  # Note that to use this OpenCV must be build within the GPU's Cuda Cores
-model.setPreferableTarget(
-    cv2.dnn.DNN_TARGET_CUDA
-)  # Will automatically switch to CPU whenever unconfigured.
+model.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
 print("Yolo Initialization Successful")
 
@@ -55,17 +41,13 @@ def recordData(name):
 
 
 def findObjects(img):
-    start_time = time.time()  # Time initaialization to compute for FPS
+    start_time = time.time()
 
-    blob = cv2.dnn.blobFromImage(
-        img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False
-    )  # Converts video feed into blobs
+    blob = cv2.dnn.blobFromImage(img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
 
-    # layerNames = model.getLayerNames()
-    outputNames = model.getUnconnectedOutLayersNames()  # Used for getting output layers
+    outputNames = model.getUnconnectedOutLayersNames()
 
-    # Object Detection Using Yolo
     detection = model.forward(outputNames)
 
     hT, wT, cT = img.shape
@@ -73,8 +55,8 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4  # YOLO Confidence Treshold
-    nmsThreshold = 0.5  # lower the more agressive and less boxes
+    confThreshold = 0.4
+    nmsThreshold = 0.5
 
     for output in detection:
         for det in output:
@@ -89,15 +71,12 @@ def findObjects(img):
                 confs.append(float(confidence))
 
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
-    indices = np.array(indices).flatten()  # Array list of detected objects
+    indices = np.array(indices).flatten()
 
-    # Drawing Bounding Box for every detection in indices
     for i in indices:
         i = i
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
-
-        # Draws Bounding Box for every detection and display the detection type
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
         cv2.putText(
             img,
@@ -108,37 +87,36 @@ def findObjects(img):
             (0, 255, 0),
             3,
         )
+        recordData(classNames[classIds[i]].upper())
 
-        recordData(
-            classNames[classIds[i]].upper()
-        )  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
-
-    # FPS Calculation
     end_time = time.time()
     elapsed_time = end_time - start_time
     fps = 1 / elapsed_time
     cv2.putText(
         img, str(round(fps, 2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
-    )  # Displays the FPS to the video feed
+    )
 
 
-while True:
-    success, img = cam.read()
+def analyze_image_from_path(filepath):
+    img = cv2.imread(filepath)
 
-    if not success:
-        break
+    # Check if the image was loaded properly
+    if img is None:
+        print(f"Error: Unable to load the image from the path: {filepath}")
+        return
 
     imgHeight, imgWidth, channels = img.shape
-    # print(img.shape) ## checking the size of video feed
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-    findObjects(img)  # Calling of Object Detection Function
-
+    findObjects(img)
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
     cv2.imshow("Image", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
-    # To stop the script press p
-    if cv2.waitKey(1) & 0xFF == ord("p"):
-        break
+
+# Static path to the image
+# image_filepath = "YOUR_STATIC_IMAGE_PATH_HERE"  # Replace this with your actual path
+image_filepath = "pyCode\samples\sample_seven.jpg"
+analyze_image_from_path(image_filepath)
