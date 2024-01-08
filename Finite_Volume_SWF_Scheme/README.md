@@ -3,7 +3,7 @@ Code snippets follow from ___Riemann Solvers and Numerical Methods for Fluid Dyn
 
 
 
-# 1- Static Code plots using Python only  for three of  the cases
+# 1- Static Code plots using Python only  for three __(1,2,3)__ of the cases
 
 
 # Numerical Solution of 1D Euler Equations using Steger-Warming Scheme
