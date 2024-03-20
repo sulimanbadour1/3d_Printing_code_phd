@@ -15,15 +15,15 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Yolo Files Initalization
-folderpath = "pyCode\Models\obj.names"
+folderpath = "computer_vision\pyCode\Models\obj.names"
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
 
-modelConfiguration = "pyCode\Models\custom-yolov4-tiny-detector.cfg"
-modelWeight = "pyCode\Models\custom-yolov4-tiny-detector_best.weights"
+modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg"
+modelWeight = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights"
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
 
 # To run YOLO Models on GPU
@@ -118,5 +118,5 @@ def analyze_image_from_path(filepath):
 
 # Static path to the image
 # image_filepath = "YOUR_STATIC_IMAGE_PATH_HERE"  # Replace this with your actual path
-image_filepath = "pyCode\samples\sample_one.jpg"
+image_filepath = "computer_vision\pyCode\samples\sample_four.png"
 analyze_image_from_path(image_filepath)
