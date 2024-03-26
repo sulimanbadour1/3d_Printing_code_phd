@@ -1,9 +1,30 @@
-# Initialization of dependencies
+from pytube import YouTube
 import cv2
+import os
+
 import numpy as np
 from datetime import datetime
 import time
 
+
+# Download video from YouTube
+def download_video(url, path="downloaded_videos"):
+    yt = YouTube(url)
+    stream = yt.streams.filter(res="720p").first()  # You can customize the resolution
+    if not os.path.exists(path):
+        os.makedirs(path)
+    stream.download(output_path=path)
+    return os.path.join(path, stream.default_filename)
+
+
+# URL of the YouTube video
+video_url = "https://www.youtube.com/watch?v=tX6qY3oPN34 "
+video_path = download_video(video_url)
+
+# Now, use video_path with cv2.VideoCapture
+cam = cv2.VideoCapture(video_path)
+
+# The rest of your object detection code follows...
 # Initalization of time values
 now = datetime.now()
 timestr = str(now.strftime("%H:%M:%S"))
@@ -13,9 +34,6 @@ filename = str("results.txt")
 with open(filename, "a") as f:
     f.write("\nSession: " + date + timestr + "\n")
 print("Initializing Data Output")
-
-# Camera Initialization
-cam = cv2.VideoCapture(0)
 
 # Yolo Files Initalization
 folderpath = "computer_vision\pyCode\Models\obj.names"
