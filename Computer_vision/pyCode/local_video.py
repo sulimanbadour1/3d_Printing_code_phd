@@ -19,7 +19,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos\Stop Stringing when 3d printing! How to reduce or solve stringing on a 3d printer -cura or otherwise.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos\What causes lines in the middle of a 3d print Solve under extrusion problems mid print halfway up!.mp4"  # Provide the path to your video file here
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
@@ -31,7 +31,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 modelConfiguration = "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg"
-modelWeight = "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
+modelWeight = (
+    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
+)
 
 
 # ----------- March Models

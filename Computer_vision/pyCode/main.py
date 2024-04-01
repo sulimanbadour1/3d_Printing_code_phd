@@ -1,4 +1,4 @@
- # Initialization of dependencies
+# Initialization of dependencies
 import cv2
 import numpy as np
 from datetime import datetime
@@ -148,5 +148,5 @@ while True:
     cv2.imshow("Image", img)
 
     # To stop the script press p
-    if cv2.waitKey(1) & 0xFF == ord("p"):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
