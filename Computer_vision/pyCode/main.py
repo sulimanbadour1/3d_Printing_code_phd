@@ -1,4 +1,4 @@
-# Initialization of dependencies
+ # Initialization of dependencies
 import cv2
 import numpy as np
 from datetime import datetime
@@ -32,6 +32,12 @@ modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.
 #     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
 # )
 modelWeight = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights"
+# ----------- March Models
+# computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
+
+# ------------ October Models
+# computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights
+
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(

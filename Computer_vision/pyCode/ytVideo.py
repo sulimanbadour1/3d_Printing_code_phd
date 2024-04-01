@@ -18,7 +18,7 @@ def download_video(url, path="downloaded_videos"):
 
 
 # URL of the YouTube video
-video_url = "https://www.youtube.com/watch?v=tX6qY3oPN34 "
+video_url = "https://youtu.be/hQYHQpxmbNE?si=fBP1DQmeGF-06gIk"
 video_path = download_video(video_url)
 
 # Now, use video_path with cv2.VideoCapture
@@ -43,13 +43,19 @@ with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
+# March 2024
+# computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
+# Original 2024
+# computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights
 
 # modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
 modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg"
 # modelWeight = (
 #     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
 # )
-modelWeight = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights"
+modelWeight = (
+    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
+)
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(
@@ -93,7 +99,7 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4  # YOLO Confidence Treshold
+    confThreshold = 0.3  # YOLO Confidence Treshold
     nmsThreshold = 0.5  # lower the more agressive and less boxes
 
     for output in detection:

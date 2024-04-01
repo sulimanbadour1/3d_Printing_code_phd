@@ -69,7 +69,7 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4
+    confThreshold = 0.3
     nmsThreshold = 0.5
 
     for output in detections:
@@ -97,7 +97,7 @@ def findObjects(img):
         x, y, w, h = bbox[i]
         object_height_in_pixels = h
         # Example real object height and camera focal length (adjust these values based on your setup)
-        real_object_height = 0.15  # meters
+        real_object_height = 0.1  # meters
         camera_focal_length_in_pixels = 800
         distance = calculate_distance(
             real_object_height, object_height_in_pixels, camera_focal_length_in_pixels
@@ -150,5 +150,5 @@ def analyze_image_from_path(filepath):
 
 
 # Example use with a static path to an image for testing
-image_filepath = "computer_vision/pyCode/samples/pic (2).jpg"
+image_filepath = "computer_vision/pyCode/samples/pic (4).jpg"
 analyze_image_from_path(image_filepath)
