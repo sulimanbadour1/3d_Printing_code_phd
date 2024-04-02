@@ -1,0 +1,18 @@
+Model: April Model
+Average Inference Time: 0.0578 seconds
+Total Detections: 5
+Detection Times: 0.0578s
+Detected Classes: Blobs, Spaghetti
+
+Model: March Model
+Average Inference Time: 0.0567 seconds
+Total Detections: 1
+Detection Times: 0.0567s
+Detected Classes: Spaghetti
+
+Model: October Model
+Average Inference Time: 0.0520 seconds
+Total Detections: 2
+Detection Times: 0.0520s
+Detected Classes: Spaghetti
+

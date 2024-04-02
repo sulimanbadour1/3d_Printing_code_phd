@@ -178,6 +178,24 @@ def summarize_results(
     plt.show()
 
 
+# def write_results_to_file(results):
+#     with open(
+#         "computer_vision\pyCode\models_compare\model_comparison_results.txt", "w"
+#     ) as file:
+#         for model_name, data in results.items():
+#             file.write(f"Model: {model_name}\n")
+#             avg_inference_time = sum(data["inference_times"]) / len(
+#                 data["inference_times"]
+#             )
+#             total_detections = sum(data["detection_counts"])
+#             unique_detected_classes = list(set(data["detected_classes"]))
+#             file.write(f"Average Inference Time: {avg_inference_time:.4f} seconds\n")
+#             file.write(f"Total Detections: {total_detections}\n")
+#             file.write(
+#                 "Detected Classes: " + ", ".join(unique_detected_classes) + "\n\n"
+#             )
+
+
 ############ Summary ############
 def compare_models():
     model_paths = [
@@ -199,12 +217,16 @@ def compare_models():
     ]
 
     test_images = [
-        "computer_vision/pyCode/models_compare/img/two.png",
+        "computer_vision/pyCode/models_compare/img/one.jpg",
     ]
     inference_times = []
     model_names = []
+    # model_names = ["April", "March", "October"]
     detection_counts = []
     classes_detected = {}  # Dictionary to store detected classes for each model
+
+    # Initialize a dictionary to hold all the information
+    results = {}
 
     for cfg_file, weights_file, names_file in model_paths:
         model, classes = load_model(cfg_file, weights_file, names_file)
@@ -213,6 +235,11 @@ def compare_models():
         total_time = 0
         total_detections = 0
         all_detected_classes = []  # List to store all detected classes for each model
+        results[model_name] = {
+            "inference_times": [],
+            "detection_counts": [],
+            "detected_classes": [],
+        }
 
         for image_path in test_images:
             img = cv2.imread(image_path)
@@ -236,6 +263,23 @@ def compare_models():
             total_detections += len(boxes)
             all_detected_classes.extend(detected_class_names)  # Add detected classes
 
+            # Store results for each image
+            outputs = detect_objects(model, img)
+            inference_start = time.time()
+            boxes, confidences, class_ids, detected_class_names = post_process(
+                outputs, classes, img.shape[1], img.shape[0]
+            )
+            inference_end = time.time()
+            # _______________ #
+            inference_time = inference_end - inference_start
+            total_time += inference_time
+            results[model_name]["inference_times"].append(inference_time)
+            results[model_name]["detection_counts"].append(len(boxes))
+            results[model_name]["detected_classes"].extend(
+                list(set(detected_class_names))
+            )
+            # Store results for each image
+
             img_with_detections = img.copy()
             draw_boxes(img_with_detections, boxes, confidences, class_ids, classes)
             cv2.imshow(model_name, img_with_detections)
@@ -251,14 +295,7 @@ def compare_models():
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
-        model_names = ["April", "March", "October"]
-
-    # with open(
-    #     "computer_vision/pyCode/models_compare/detection_results.txt", "w"
-    # ) as file:
-    #     file.write(
-    #         f"Detected in {image_path.split('/')[-1]}: {', '.join(detected_class_names)}\n"
-    #     )
+        # model_names = ["April", "March", "October"]
 
     plot_inference_times(
         inference_times,
@@ -270,6 +307,8 @@ def compare_models():
     summarize_results(
         inference_times, detection_counts, model_names, test_images, classes_detected
     )
+    # After collecting all data, write it to a file
+    # write_results_to_file(results)
 
 
 compare_models()
