@@ -14,16 +14,16 @@ The annotation of images and the setup of the train-test split were accomplished
 
 The detection model was trained using Google Colab, a cloud-based platform, through 10,000 iterations. This training process utilized the darknet architecture of YOLOv4-Tiny, leading to the creation of configuration (cfg), weights, and name files for the model.
 
-- Google Collab Training Notebook: https://colab.research.google.com/drive/17oU-cuJcYoama6hatZi_CREhWnAqBPbl?usp=sharing
+<!-- - Google Collab Training Notebook: https://colab.research.google.com/drive/17oU-cuJcYoama6hatZi_CREhWnAqBPbl?usp=sharing -->
 
 - The attached dataset in the notebook can be utilized for training other detection models based on Darknet.
 
 ## Phots Results
 
 After initializing YOLO files, the camera feed is presented, and in case of any detected faults, the feed will show a bounding box along with its associated class. While these bounding boxes are being displayed, the detection results are simultaneously logged into a text file. This text file not only contains the detection outcomes but also includes details about the session when the program was started, including the date and time when the program script was executed.
-
+<!-- 
 <p align="center"> 
   <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/1.JPG?raw=true" height= "200"/>
    <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/2.png?raw=true" height= "200"/>
  <img src="https://github.com/sulimanbadour1/3d_Printing_code_phd/blob/main/photos/3.png?raw=true" height= "200"/> 
-</p>
+</p> -->
