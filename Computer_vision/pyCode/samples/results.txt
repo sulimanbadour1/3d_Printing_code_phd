@@ -151,3 +151,99 @@ Session: 30/03/2024 00:28:07
 BLOBS - Coordinates: (247, 356), Size: (236x130), Distance: 0.62m - 00:28:08
 BLOBS - Coordinates: (550, 288), Size: (229x160), Distance: 0.5m - 00:28:08
 BLOBS - Coordinates: (0, 293), Size: (229x211), Distance: 0.38m - 00:28:08
+
+Session: 02/04/2024 02:25:59
+UNDER EXTRUSION - Coordinates: (531, 271), Size: (257x183), Distance: 0.44m - 02:26:00
+UNDER EXTRUSION - Coordinates: (0, 261), Size: (240x251), Distance: 0.32m - 02:26:00
+BLOBS - Coordinates: (257, 353), Size: (230x131), Distance: 0.61m - 02:26:00
+
+Session: 02/04/2024 02:26:38
+CRACKS - Coordinates: (40, 66), Size: (108x24), Distance: 3.33m - 02:26:39
+CRACKS - Coordinates: (49, 122), Size: (108x24), Distance: 3.33m - 02:26:39
+CRACKS - Coordinates: (46, 25), Size: (103x26), Distance: 3.08m - 02:26:39
+CRACKS - Coordinates: (181, 55), Size: (45x15), Distance: 5.33m - 02:26:39
+
+Session: 02/04/2024 02:27:11
+SPAGHETTI - Coordinates: (81, 38), Size: (541x440), Distance: 0.18m - 02:27:12
+
+Session: 02/04/2024 02:27:20
+
+Session: 02/04/2024 02:27:31
+
+Session: 02/04/2024 02:27:37
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:27:38
+
+Session: 02/04/2024 02:29:24
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:29:25
+
+Session: 02/04/2024 02:29:55
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:29:57
+
+Session: 02/04/2024 02:30:28
+SPAGHETTI - Coordinates: (81, 38), Size: (541x440), Distance: 0.18m - 02:30:29
+
+Session: 02/04/2024 02:30:49
+SPAGHETTI - Coordinates: (81, 38), Size: (541x440), Distance: 0.18m - 02:30:50
+
+Session: 02/04/2024 02:31:43
+SPAGHETTI - Coordinates: (81, 38), Size: (541x440), Distance: 0.18m - 02:31:44
+
+Session: 02/04/2024 02:31:53
+
+Session: 02/04/2024 02:32:59
+
+Session: 02/04/2024 02:33:06
+
+Session: 02/04/2024 02:33:24
+
+Session: 02/04/2024 02:33:39
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:33:40
+
+Session: 02/04/2024 02:33:55
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:33:56
+
+Session: 02/04/2024 02:34:58
+SPAGHETTI - Coordinates: (1442, 772), Size: (1745x1641), Distance: 0.05m - 02:35:00
+
+Session: 02/04/2024 02:36:26
+
+Session: 02/04/2024 02:36:37
+
+Session: 02/04/2024 02:37:07
+SPAGHETTI - Coordinates: (1403, 771), Size: (1871x1579), Distance: 0.05m - 02:37:08
+
+Session: 02/04/2024 02:37:44
+BLOBS - Coordinates: (258, 350), Size: (227x131), Distance: 0.61m - 02:37:45
+BLOBS - Coordinates: (549, 292), Size: (232x157), Distance: 0.51m - 02:37:45
+
+Session: 02/04/2024 02:37:57
+BLOBS - Coordinates: (103, 48), Size: (103x75), Distance: 1.07m - 02:37:58
+BLOBS - Coordinates: (120, 47), Size: (47x77), Distance: 1.04m - 02:37:58
+
+Session: 02/04/2024 02:38:22
+BLOBS - Coordinates: (103, 48), Size: (103x75), Distance: 1.07m - 02:38:24
+BLOBS - Coordinates: (120, 47), Size: (47x77), Distance: 1.04m - 02:38:24
+
+Session: 02/04/2024 02:38:35
+STRINGGING - Coordinates: (71, 258), Size: (153x244), Distance: 0.33m - 02:38:36
+
+Session: 02/04/2024 02:38:47
+BLOBS - Coordinates: (1065, 1224), Size: (1182x1079), Distance: 0.07m - 02:38:48
+
+Session: 02/04/2024 02:38:58
+
+Session: 02/04/2024 02:39:20
+
+Session: 02/04/2024 02:40:31
+
+Session: 02/04/2024 02:40:45
+
+Session: 02/04/2024 02:40:54
+
+Session: 02/04/2024 02:41:08
+
+Session: 02/04/2024 02:41:14
+
+Session: 02/04/2024 02:41:46
+
+Session: 02/04/2024 02:42:03

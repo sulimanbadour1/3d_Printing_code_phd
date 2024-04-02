@@ -118,5 +118,5 @@ def analyze_image_from_path(filepath):
 
 # Static path to the image
 # image_filepath = "YOUR_STATIC_IMAGE_PATH_HERE"  # Replace this with your actual path
-image_filepath = "computer_vision\pyCode\samples\sample_one.jpg"
+image_filepath = "computer_vision\pyCode\samples\pic (7).jpg"
 analyze_image_from_path(image_filepath)

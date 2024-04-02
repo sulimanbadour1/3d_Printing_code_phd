@@ -18,7 +18,7 @@ print("Initializing Data Output")
 cam = cv2.VideoCapture(0)
 
 # Yolo Files Initalization
-folderpath = "computer_vision\pyCode\Models\obj.names"
+folderpath = "computer_vision\pyCode\models_april\obj.names"
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
@@ -27,17 +27,30 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
-modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg"
+modelConfiguration = (
+    "computer_vision\pyCode\models_april\custom-yolov4-tiny-detector.cfg"
+)
 # modelWeight = (
 #     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
 # )
-modelWeight = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights"
-# ----------- March Models
+modelWeight = (
+    "computer_vision\pyCode\models_april\custom-yolov4-tiny-detector_best.weights"
+)
+
+
+# -------------- April Models +++ Warping
+# weight file -----   computer_vision\pyCode\models_april\custom-yolov4-tiny-detector_best.weights
+## conf file -----    computer_vision\pyCode\models_april\custom-yolov4-tiny-detector.cfg
+## names file -----   computer_vision\pyCode\models_april\obj.names
+
+
+# ----------- March Models --- best without warping
 # computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
 
-# ------------ October Models
+# ------------ October Models --- without warping
 # computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights
-
+## conf file -----    computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg
+## names file -----    computer_vision\pyCode\Models\obj.names
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(
