@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 # Define your model configurations
 model_configurations = [
     {
-        "name": "April Model",
-        "cfg": "computer_vision/pyCode/models_april/custom-yolov4-tiny-detector.cfg",
-        "weights": "computer_vision/pyCode/models_april/custom-yolov4-tiny-detector_best.weights",
-        "names": "computer_vision/pyCode/models_april/obj.names",
+        "name": "April Model the first",
+        "cfg": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/models_april/first_of_april/obj.names",
     },
     {
         "name": "March Model",
