@@ -41,7 +41,7 @@ def detect_objects(model, img):
     return outputs
 
 
-def post_process(outputs, classes, img_width, img_height, confidence_threshold=0.5):
+def post_process(outputs, classes, img_width, img_height, confidence_threshold=0.1):
     boxes = []
     confidences = []
     class_ids = []
@@ -198,7 +198,7 @@ def compare_models_and_document(test_images):
 
 
 test_images = [
-    "computer_vision/pyCode/models_compare/img/three.jpg",
+    "computer_vision/pyCode/models_compare/img/seven.png",
 ]
 
 compare_models_and_document(test_images)
