@@ -6,30 +6,36 @@ import matplotlib.pyplot as plt
 # Define your model configurations
 model_configurations = [
     {
-        "name": "April Model the first",
-        "cfg": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
-        "weights": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
-        "names": "computer_vision/pyCode/models_april/first_of_april/obj.names",
+        "name": "April Model eight",
+        "cfg": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/models_april/eight_april/obj.names",
     },
-    {
-        "name": "March Model",
-        "cfg": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
-        "weights": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
-        "names": "computer_vision/pyCode/Models_march/obj.names",
-    },
-    {
-        "name": "October Model",
-        "cfg": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
-        "weights": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
-        "names": "computer_vision/pyCode/Models/obj.names",
-    },
+    # {
+    #     "name": "April Model the first",
+    #     "cfg": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
+    #     "weights": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
+    #     "names": "computer_vision/pyCode/models_april/first_of_april/obj.names",
+    # },
+    # {
+    #     "name": "March Model",
+    #     "cfg": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
+    #     "weights": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
+    #     "names": "computer_vision/pyCode/Models_march/obj.names",
+    # },
+    # {
+    #     "name": "October Model",
+    #     "cfg": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
+    #     "weights": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
+    #     "names": "computer_vision/pyCode/Models/obj.names",
+    # },
 ]
 
 
 def load_model(cfg_file, weights_file, names_file):
     net = cv2.dnn.readNetFromDarknet(cfg_file, weights_file)
     with open(names_file, "rt") as f:
-        classes = f.read().rstrip("\n").split("\n")
+        classes = f.read().rstrip("\n").split("\n")  # Corrected "/n" to "\n"
     return net, classes
 
 
@@ -66,7 +72,7 @@ def analyze_model_performance(model_config, test_images):
     model, classes = load_model(
         model_config["cfg"], model_config["weights"], model_config["names"]
     )
-    print(f"\nAnalyzing {model_config['name']}...")
+    print(f"/nAnalyzing {model_config['name']}...")
 
     results = {
         "inference_times": [],
@@ -181,7 +187,7 @@ def compare_models_and_document(test_images):
     )  # Display all detected images side by side
 
     with open(
-        "computer_vision\pyCode\models_compare\model_comparison_results.txt", "w"
+        "computer_vision/pyCode/models_compare/model_comparison_results.txt", "w"
     ) as file:
         for model_name, data in results.items():
             file.write(f"Model: {model_name}\n")
@@ -198,7 +204,7 @@ def compare_models_and_document(test_images):
 
 
 test_images = [
-    "computer_vision/pyCode/models_compare/img/seven.png",
+    "computer_vision/pyCode/models_compare/img/three.jpg",
 ]
 
 compare_models_and_document(test_images)

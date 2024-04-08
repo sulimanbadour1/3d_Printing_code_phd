@@ -199,25 +199,30 @@ def summarize_results(
 ############ Summary ############
 def compare_models():
     model_paths = [
+        # (
+        #     "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
+        #     "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
+        #     "computer_vision/pyCode/models_april/first_of_april/obj.names",
+        # ),
+        # (
+        #     "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
+        #     "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
+        #     "computer_vision/pyCode/Models_march/obj.names",
+        # ),
+        # (
+        #     "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
+        #     "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
+        #     "computer_vision/pyCode/Models/obj.names",
+        # ),
         (
-            "computer_vision/pyCode/models_april/custom-yolov4-tiny-detector.cfg",
-            "computer_vision/pyCode/models_april/custom-yolov4-tiny-detector_best.weights",
-            "computer_vision/pyCode/models_april/obj.names",
-        ),
-        (
-            "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
-            "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
-            "computer_vision/pyCode/Models_march/obj.names",
-        ),
-        (
-            "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
-            "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
-            "computer_vision/pyCode/Models/obj.names",
+            "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg",
+            "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights",
+            "computer_vision/pyCode/models_april/eight_april/obj.names",
         ),
     ]
 
     test_images = [
-        "computer_vision/pyCode/models_compare/img/one.jpg",
+        "computer_vision\pyCode\models_compare\img\wrap.jpg",
     ]
     inference_times = []
     model_names = []

@@ -30,6 +30,12 @@ modelWeight = (
 )
 
 
+# -------------- April Models +++ the best
+# "name": "April Model eight",
+#         "cfg": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg",
+#         "weights": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights",
+#         "names": "computer_vision/pyCode/models_april/eight_april/obj.names",
+
 # -------------- April Models +++ Warping
 # weight file -----   computer_vision\pyCode\models_april\custom-yolov4-tiny-detector_best.weights
 ## conf file -----    computer_vision\pyCode\models_april\custom-yolov4-tiny-detector.cfg
@@ -165,5 +171,5 @@ def analyze_image_from_path(filepath):
 
 
 # Example use with a static path to an image for testing
-image_filepath = "computer_vision/pyCode/samples/pic (9).jpg"
+image_filepath = "computer_vision/pyCode/models_compare/img/three.jpg"
 analyze_image_from_path(image_filepath)
