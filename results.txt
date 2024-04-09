@@ -17029,3 +17029,862 @@ STRINGGING - 18:22:00
 Session: 09/04/202419:11:22
 
 Session: 09/04/202419:11:50
+
+Session: 09/04/202423:24:32
+
+Session: 09/04/202423:25:37
+
+Session: 09/04/202423:26:00
+
+Session: 09/04/202423:26:08
+
+Session: 09/04/202423:26:14
+
+Session: 09/04/202423:26:18
+
+Session: 09/04/202423:27:01
+STRINGGING - 23:27:01
+STRINGGING - 23:27:01
+STRINGGING - 23:27:01
+
+Session: 09/04/202423:28:27
+STRINGGING - 23:28:27
+STRINGGING - 23:28:27
+STRINGGING - 23:28:27
+
+Session: 09/04/202423:28:42
+STRINGGING - 23:28:42
+STRINGGING - 23:28:42
+STRINGGING - 23:28:42
+
+Session: 09/04/202423:28:49
+STRINGGING - 23:28:50
+STRINGGING - 23:28:50
+STRINGGING - 23:28:50
+
+Session: 09/04/202423:36:25
+STRINGGING - 23:36:25
+STRINGGING - 23:36:25
+STRINGGING - 23:36:25
+
+Session: 09/04/202423:36:39
+
+Session: 09/04/202423:36:44
+STRINGGING - 23:36:44
+STRINGGING - 23:36:44
+STRINGGING - 23:36:44
+
+Session: 09/04/2024 23:49:58
+UNDER EXTRUSION - 23:50:00
+UNDER EXTRUSION - 23:50:00
+UNDER EXTRUSION - 23:50:01
+UNDER EXTRUSION - 23:50:01
+UNDER EXTRUSION - 23:50:02
+UNDER EXTRUSION - 23:50:07
+UNDER EXTRUSION - 23:50:18
+UNDER EXTRUSION - 23:50:18
+STRINGGING - 23:50:18
+WARPING - 23:50:19
+CRACKS - 23:50:23
+STRINGGING - 23:50:23
+WARPING - 23:50:24
+WARPING - 23:50:24
+WARPING - 23:50:24
+WARPING - 23:50:24
+WARPING - 23:50:27
+WARPING - 23:50:27
+WARPING - 23:50:27
+WARPING - 23:50:27
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:28
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:29
+WARPING - 23:50:30
+WARPING - 23:50:30
+WARPING - 23:50:30
+WARPING - 23:50:31
+WARPING - 23:50:32
+STRINGGING - 23:50:34
+STRINGGING - 23:50:35
+STRINGGING - 23:50:35
+STRINGGING - 23:50:35
+STRINGGING - 23:50:35
+STRINGGING - 23:50:36
+STRINGGING - 23:50:36
+STRINGGING - 23:50:36
+STRINGGING - 23:50:36
+STRINGGING - 23:50:37
+STRINGGING - 23:50:37
+STRINGGING - 23:50:37
+STRINGGING - 23:50:37
+STRINGGING - 23:50:38
+STRINGGING - 23:50:38
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:57
+STRINGGING - 23:50:59
+WARPING - 23:51:01
+WARPING - 23:51:01
+SPAGHETTI - 23:51:11
+UNDER EXTRUSION - 23:51:20
+UNDER EXTRUSION - 23:51:20
+UNDER EXTRUSION - 23:51:20
+UNDER EXTRUSION - 23:51:20
+UNDER EXTRUSION - 23:51:38
+SPAGHETTI - 23:51:40
+SPAGHETTI - 23:51:40
+STRINGGING - 23:51:41
+STRINGGING - 23:51:41
+STRINGGING - 23:51:41
+WARPING - 23:51:44
+WARPING - 23:51:44
+WARPING - 23:51:44
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:45
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:46
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:47
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:48
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:49
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:50
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:51
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:52
+WARPING - 23:51:53
+WARPING - 23:51:53
+
+Session: 09/04/2024 23:52:08
+WARPING - 0.00cm - 23:52:25
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:26
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:27
+WARPING - 0.00cm - 23:52:28
+WARPING - 0.00cm - 23:52:31
+WARPING - 0.00cm - 23:52:31
+WARPING - 0.00cm - 23:52:31
+WARPING - 0.00cm - 23:52:31
+WARPING - 0.00cm - 23:52:34
+WARPING - 0.00cm - 23:52:36
+WARPING - 0.00cm - 23:52:36
+WARPING - 0.00cm - 23:52:36
+WARPING - 0.00cm - 23:52:36
+WARPING - 0.00cm - 23:52:36
+WARPING - 0.00cm - 23:52:36
+
+Session: 09/04/2024 23:53:08
+BLOBS Center: (145, 357), Depth: 62.43cm - 23:53:14
+BLOBS Center: (145, 356), Depth: 62.90cm - 23:53:14
+BLOBS Center: (143, 353), Depth: 63.03cm - 23:53:15
+BLOBS Center: (143, 352), Depth: 63.18cm - 23:53:15
+BLOBS Center: (149, 350), Depth: 63.28cm - 23:53:15
+BLOBS Center: (148, 353), Depth: 63.25cm - 23:53:15
+BLOBS Center: (149, 352), Depth: 63.38cm - 23:53:15
+BLOBS Center: (150, 355), Depth: 63.48cm - 23:53:15
+BLOBS Center: (149, 353), Depth: 63.48cm - 23:53:15
+BLOBS Center: (147, 354), Depth: 63.40cm - 23:53:15
+BLOBS Center: (148, 353), Depth: 63.55cm - 23:53:15
+BLOBS Center: (147, 351), Depth: 63.45cm - 23:53:15
+BLOBS Center: (147, 354), Depth: 63.58cm - 23:53:15
+BLOBS Center: (147, 355), Depth: 63.58cm - 23:53:15
+BLOBS Center: (151, 356), Depth: 63.63cm - 23:53:16
+BLOBS Center: (154, 355), Depth: 63.85cm - 23:53:16
+BLOBS Center: (149, 359), Depth: 63.50cm - 23:53:16
+BLOBS Center: (157, 354), Depth: 63.45cm - 23:53:16
+UNDER EXTRUSION Center: (173, 321), Depth: 65.20cm - 23:53:17
+UNDER EXTRUSION Center: (171, 316), Depth: 65.40cm - 23:53:17
+UNDER EXTRUSION Center: (174, 320), Depth: 65.48cm - 23:53:17
+UNDER EXTRUSION Center: (169, 316), Depth: 65.38cm - 23:53:17
+UNDER EXTRUSION Center: (175, 315), Depth: 65.78cm - 23:53:17
+UNDER EXTRUSION Center: (169, 311), Depth: 65.45cm - 23:53:17
+WARPING Center: (302, 419), Depth: 0.00cm - 23:53:19
+STRINGGING Center: (361, 279), Depth: 0.00cm - 23:53:25
+WARPING Center: (395, 351), Depth: 0.00cm - 23:53:28
+WARPING Center: (287, 367), Depth: 0.00cm - 23:53:28
+WARPING Center: (278, 361), Depth: 0.00cm - 23:53:28
+WARPING Center: (276, 348), Depth: 0.00cm - 23:53:28
+WARPING Center: (275, 361), Depth: 0.00cm - 23:53:28
+WARPING Center: (273, 363), Depth: 0.00cm - 23:53:28
+WARPING Center: (279, 360), Depth: 0.00cm - 23:53:28
+WARPING Center: (276, 355), Depth: 0.00cm - 23:53:28
+WARPING Center: (278, 364), Depth: 0.00cm - 23:53:28
+WARPING Center: (272, 356), Depth: 0.00cm - 23:53:28
+WARPING Center: (276, 365), Depth: 0.00cm - 23:53:28
+WARPING Center: (270, 368), Depth: 0.00cm - 23:53:28
+WARPING Center: (243, 365), Depth: 0.00cm - 23:53:28
+WARPING Center: (275, 372), Depth: 0.00cm - 23:53:28
+WARPING Center: (278, 371), Depth: 0.00cm - 23:53:29
+WARPING Center: (278, 372), Depth: 0.00cm - 23:53:29
+WARPING Center: (277, 372), Depth: 0.00cm - 23:53:29
+WARPING Center: (275, 368), Depth: 0.00cm - 23:53:29
+WARPING Center: (266, 378), Depth: 0.00cm - 23:53:29
+WARPING Center: (276, 367), Depth: 0.00cm - 23:53:29
+WARPING Center: (272, 372), Depth: 0.00cm - 23:53:29
+WARPING Center: (278, 375), Depth: 0.00cm - 23:53:29
+WARPING Center: (282, 375), Depth: 0.00cm - 23:53:29
+WARPING Center: (277, 375), Depth: 0.00cm - 23:53:29
+WARPING Center: (279, 376), Depth: 0.00cm - 23:53:29
+WARPING Center: (276, 374), Depth: 0.00cm - 23:53:29
+WARPING Center: (266, 393), Depth: 0.00cm - 23:53:30
+WARPING Center: (269, 403), Depth: 0.00cm - 23:53:30
+WARPING Center: (270, 398), Depth: 0.00cm - 23:53:30
+WARPING Center: (269, 403), Depth: 0.00cm - 23:53:30
+WARPING Center: (269, 403), Depth: 0.00cm - 23:53:30
+WARPING Center: (269, 404), Depth: 0.00cm - 23:53:30
+WARPING Center: (268, 406), Depth: 0.00cm - 23:53:30
+WARPING Center: (269, 405), Depth: 0.00cm - 23:53:30
+WARPING Center: (265, 402), Depth: 0.00cm - 23:53:30
+WARPING Center: (268, 405), Depth: 0.00cm - 23:53:30
+WARPING Center: (266, 401), Depth: 0.00cm - 23:53:30
+WARPING Center: (266, 402), Depth: 0.00cm - 23:53:31
+WARPING Center: (265, 396), Depth: 0.00cm - 23:53:31
+WARPING Center: (221, 443), Depth: 0.00cm - 23:53:31
+WARPING Center: (220, 445), Depth: 0.00cm - 23:53:31
+WARPING Center: (223, 444), Depth: 0.00cm - 23:53:31
+WARPING Center: (220, 440), Depth: 0.00cm - 23:53:31
+WARPING Center: (221, 445), Depth: 0.00cm - 23:53:31
+WARPING Center: (221, 446), Depth: 0.00cm - 23:53:31
+WARPING Center: (223, 447), Depth: 0.00cm - 23:53:31
+WARPING Center: (225, 446), Depth: 0.00cm - 23:53:31
+WARPING Center: (222, 450), Depth: 0.00cm - 23:53:31
+WARPING Center: (233, 450), Depth: 0.00cm - 23:53:32
+WARPING Center: (233, 447), Depth: 0.00cm - 23:53:32
+WARPING Center: (231, 447), Depth: 0.00cm - 23:53:32
+WARPING Center: (268, 439), Depth: 0.00cm - 23:53:32
+WARPING Center: (286, 438), Depth: 0.00cm - 23:53:32
+WARPING Center: (281, 442), Depth: 0.00cm - 23:53:32
+WARPING Center: (293, 428), Depth: 0.00cm - 23:53:32
+WARPING Center: (284, 425), Depth: 0.00cm - 23:53:32
+WARPING Center: (286, 425), Depth: 0.00cm - 23:53:32
+WARPING Center: (294, 427), Depth: 0.00cm - 23:53:32
+WARPING Center: (286, 426), Depth: 0.00cm - 23:53:32
+WARPING Center: (220, 446), Depth: 0.00cm - 23:53:32
+WARPING Center: (230, 446), Depth: 0.00cm - 23:53:32
+WARPING Center: (216, 445), Depth: 0.00cm - 23:53:32
+WARPING Center: (224, 440), Depth: 0.00cm - 23:53:32
+WARPING Center: (235, 441), Depth: 0.00cm - 23:53:32
+WARPING Center: (223, 439), Depth: 0.00cm - 23:53:33
+WARPING Center: (230, 444), Depth: 0.00cm - 23:53:33
+WARPING Center: (228, 440), Depth: 0.00cm - 23:53:33
+WARPING Center: (300, 370), Depth: 0.00cm - 23:53:34
+WARPING Center: (302, 371), Depth: 0.00cm - 23:53:34
+WARPING Center: (301, 372), Depth: 0.00cm - 23:53:34
+WARPING Center: (297, 369), Depth: 0.00cm - 23:53:34
+WARPING Center: (288, 375), Depth: 0.00cm - 23:53:34
+WARPING Center: (272, 372), Depth: 0.00cm - 23:53:34
+WARPING Center: (264, 370), Depth: 0.00cm - 23:53:34
+WARPING Center: (262, 366), Depth: 0.00cm - 23:53:34
+WARPING Center: (339, 270), Depth: 0.00cm - 23:53:35
+WARPING Center: (289, 349), Depth: 0.00cm - 23:53:35
+WARPING Center: (293, 354), Depth: 0.00cm - 23:53:35
+WARPING Center: (290, 349), Depth: 0.00cm - 23:53:35
+WARPING Center: (285, 313), Depth: 0.00cm - 23:53:38
+WARPING Center: (229, 316), Depth: 0.00cm - 23:53:38
+WARPING Center: (282, 312), Depth: 0.00cm - 23:53:38
+WARPING Center: (276, 312), Depth: 0.00cm - 23:53:38
+WARPING Center: (232, 315), Depth: 0.00cm - 23:53:38
+WARPING Center: (230, 314), Depth: 0.00cm - 23:53:38
+WARPING Center: (229, 314), Depth: 0.00cm - 23:53:38
+WARPING Center: (275, 308), Depth: 0.00cm - 23:53:38
+WARPING Center: (274, 301), Depth: 0.00cm - 23:53:38
+WARPING Center: (274, 302), Depth: 0.00cm - 23:53:38
+WARPING Center: (276, 295), Depth: 0.00cm - 23:53:38
+WARPING Center: (234, 303), Depth: 0.00cm - 23:53:38
+WARPING Center: (234, 300), Depth: 0.00cm - 23:53:39
+WARPING Center: (237, 294), Depth: 0.00cm - 23:53:39
+WARPING Center: (232, 301), Depth: 0.00cm - 23:53:39
+WARPING Center: (234, 300), Depth: 0.00cm - 23:53:39
+WARPING Center: (229, 305), Depth: 0.00cm - 23:53:39
+WARPING Center: (238, 299), Depth: 0.00cm - 23:53:39
+WARPING Center: (226, 319), Depth: 0.00cm - 23:53:40
+WARPING Center: (222, 362), Depth: 0.00cm - 23:53:41
+WARPING Center: (224, 366), Depth: 0.00cm - 23:53:41
+WARPING Center: (231, 366), Depth: 0.00cm - 23:53:42
+WARPING Center: (234, 365), Depth: 0.00cm - 23:53:42
+WARPING Center: (276, 365), Depth: 0.00cm - 23:53:42
+WARPING Center: (288, 362), Depth: 0.00cm - 23:53:42
+WARPING Center: (329, 343), Depth: 0.00cm - 23:53:43
+WARPING Center: (329, 342), Depth: 0.00cm - 23:53:43
+WARPING Center: (280, 325), Depth: 0.00cm - 23:53:44
+WARPING Center: (277, 323), Depth: 0.00cm - 23:53:44
+WARPING Center: (279, 321), Depth: 0.00cm - 23:53:44
+WARPING Center: (271, 316), Depth: 0.00cm - 23:53:44
+WARPING Center: (284, 318), Depth: 0.00cm - 23:53:44
+WARPING Center: (284, 313), Depth: 0.00cm - 23:53:44
+WARPING Center: (225, 301), Depth: 0.00cm - 23:53:44
+
+Session: 09/04/2024 23:55:53
+STRINGGING Center: (174, 469), Depth: 18.28cm - 23:56:02
+STRINGGING Center: (175, 469), Depth: 17.65cm - 23:56:02
+WARPING Center: (345, 280), Depth: 27.78cm - 23:56:05
+SPAGHETTI Center: (542, 69), Depth: 12.33cm - 23:56:06
+WARPING Center: (203, 339), Depth: 14.38cm - 23:56:06
+WARPING Center: (206, 333), Depth: 14.25cm - 23:56:06
+WARPING Center: (220, 343), Depth: 14.12cm - 23:56:06
+WARPING Center: (213, 341), Depth: 14.00cm - 23:56:06
+WARPING Center: (225, 348), Depth: 13.88cm - 23:56:06
+WARPING Center: (212, 356), Depth: 13.80cm - 23:56:06
+WARPING Center: (201, 348), Depth: 13.77cm - 23:56:06
+WARPING Center: (208, 357), Depth: 13.83cm - 23:56:07
+WARPING Center: (200, 347), Depth: 0.00cm - 23:56:07
+WARPING Center: (200, 347), Depth: 0.00cm - 23:56:07
+WARPING Center: (204, 356), Depth: 0.00cm - 23:56:07
+WARPING Center: (206, 350), Depth: 0.00cm - 23:56:07
+WARPING Center: (181, 350), Depth: 0.00cm - 23:56:07
+WARPING Center: (174, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (175, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (200, 352), Depth: 0.00cm - 23:56:07
+WARPING Center: (173, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (173, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (178, 345), Depth: 0.00cm - 23:56:07
+WARPING Center: (174, 355), Depth: 0.00cm - 23:56:07
+WARPING Center: (170, 356), Depth: 0.00cm - 23:56:07
+WARPING Center: (169, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (169, 352), Depth: 0.00cm - 23:56:07
+WARPING Center: (174, 344), Depth: 0.00cm - 23:56:07
+WARPING Center: (167, 353), Depth: 0.00cm - 23:56:07
+WARPING Center: (167, 354), Depth: 0.00cm - 23:56:07
+WARPING Center: (174, 350), Depth: 0.00cm - 23:56:07
+WARPING Center: (168, 355), Depth: 0.00cm - 23:56:07
+WARPING Center: (177, 348), Depth: 0.00cm - 23:56:07
+WARPING Center: (166, 355), Depth: 0.00cm - 23:56:08
+WARPING Center: (166, 354), Depth: 0.00cm - 23:56:08
+WARPING Center: (168, 352), Depth: 0.00cm - 23:56:08
+WARPING Center: (174, 348), Depth: 0.00cm - 23:56:08
+WARPING Center: (167, 360), Depth: 0.00cm - 23:56:08
+WARPING Center: (177, 351), Depth: 0.00cm - 23:56:08
+WARPING Center: (168, 368), Depth: 0.00cm - 23:56:08
+WARPING Center: (158, 375), Depth: 0.00cm - 23:56:08
+WARPING Center: (164, 357), Depth: 0.00cm - 23:56:09
+WARPING Center: (162, 343), Depth: 0.00cm - 23:56:09
+WARPING Center: (161, 326), Depth: 0.00cm - 23:56:09
+WARPING Center: (172, 314), Depth: 0.00cm - 23:56:09
+WARPING Center: (173, 314), Depth: 0.00cm - 23:56:09
+WARPING Center: (172, 306), Depth: 0.00cm - 23:56:09
+WARPING Center: (173, 314), Depth: 0.00cm - 23:56:09
+WARPING Center: (169, 313), Depth: 0.00cm - 23:56:09
+WARPING Center: (172, 308), Depth: 0.00cm - 23:56:09
+WARPING Center: (167, 314), Depth: 0.00cm - 23:56:09
+WARPING Center: (167, 315), Depth: 0.00cm - 23:56:09
+WARPING Center: (170, 307), Depth: 0.00cm - 23:56:09
+WARPING Center: (164, 316), Depth: 0.00cm - 23:56:09
+WARPING Center: (166, 325), Depth: 0.00cm - 23:56:10
+WARPING Center: (171, 323), Depth: 12.03cm - 23:56:10
+WARPING Center: (178, 321), Depth: 12.35cm - 23:56:10
+WARPING Center: (179, 310), Depth: 12.58cm - 23:56:10
+WARPING Center: (201, 318), Depth: 13.08cm - 23:56:10
+WARPING Center: (209, 315), Depth: 13.48cm - 23:56:11
+WARPING Center: (222, 314), Depth: 13.77cm - 23:56:11
+WARPING Center: (218, 314), Depth: 13.95cm - 23:56:11
+WARPING Center: (229, 311), Depth: 14.48cm - 23:56:11
+WARPING Center: (231, 313), Depth: 14.68cm - 23:56:11
+WARPING Center: (233, 310), Depth: 15.03cm - 23:56:11
+WARPING Center: (236, 308), Depth: 15.40cm - 23:56:11
+WARPING Center: (236, 305), Depth: 15.50cm - 23:56:11
+WARPING Center: (238, 303), Depth: 15.60cm - 23:56:11
+WARPING Center: (242, 302), Depth: 15.62cm - 23:56:11
+WARPING Center: (242, 311), Depth: 15.70cm - 23:56:11
+WARPING Center: (241, 303), Depth: 15.83cm - 23:56:11
+WARPING Center: (242, 302), Depth: 15.85cm - 23:56:11
+WARPING Center: (245, 303), Depth: 15.95cm - 23:56:11
+WARPING Center: (243, 302), Depth: 16.00cm - 23:56:11
+WARPING Center: (245, 302), Depth: 15.98cm - 23:56:11
+WARPING Center: (247, 299), Depth: 15.90cm - 23:56:11
+WARPING Center: (244, 302), Depth: 15.93cm - 23:56:11
+WARPING Center: (243, 302), Depth: 15.80cm - 23:56:11
+WARPING Center: (248, 300), Depth: 15.78cm - 23:56:11
+WARPING Center: (239, 301), Depth: 15.68cm - 23:56:11
+WARPING Center: (239, 301), Depth: 15.70cm - 23:56:11
+WARPING Center: (239, 304), Depth: 15.75cm - 23:56:11
+WARPING Center: (237, 302), Depth: 15.73cm - 23:56:11
+WARPING Center: (238, 302), Depth: 15.73cm - 23:56:11
+WARPING Center: (237, 301), Depth: 15.68cm - 23:56:12
+WARPING Center: (236, 301), Depth: 15.62cm - 23:56:12
+WARPING Center: (241, 300), Depth: 15.58cm - 23:56:12
+WARPING Center: (233, 301), Depth: 15.50cm - 23:56:12
+WARPING Center: (233, 301), Depth: 15.43cm - 23:56:12
+WARPING Center: (232, 301), Depth: 15.50cm - 23:56:12
+WARPING Center: (228, 305), Depth: 15.48cm - 23:56:12
+WARPING Center: (232, 307), Depth: 15.50cm - 23:56:12
+WARPING Center: (224, 303), Depth: 15.40cm - 23:56:12
+WARPING Center: (220, 304), Depth: 15.38cm - 23:56:12
+WARPING Center: (224, 300), Depth: 15.23cm - 23:56:12
+WARPING Center: (222, 305), Depth: 15.18cm - 23:56:12
+WARPING Center: (229, 305), Depth: 15.30cm - 23:56:12
+WARPING Center: (234, 301), Depth: 15.30cm - 23:56:12
+WARPING Center: (228, 305), Depth: 15.33cm - 23:56:12
+WARPING Center: (227, 303), Depth: 15.30cm - 23:56:12
+WARPING Center: (231, 300), Depth: 15.35cm - 23:56:12
+WARPING Center: (224, 303), Depth: 15.40cm - 23:56:12
+WARPING Center: (224, 303), Depth: 15.35cm - 23:56:12
+WARPING Center: (224, 303), Depth: 15.40cm - 23:56:13
+WARPING Center: (222, 303), Depth: 15.40cm - 23:56:13
+WARPING Center: (232, 300), Depth: 15.18cm - 23:56:13
+WARPING Center: (221, 303), Depth: 15.45cm - 23:56:13
+WARPING Center: (221, 303), Depth: 15.38cm - 23:56:13
+WARPING Center: (213, 300), Depth: 15.35cm - 23:56:13
+WARPING Center: (214, 300), Depth: 15.23cm - 23:56:13
+WARPING Center: (224, 304), Depth: 15.30cm - 23:56:13
+WARPING Center: (211, 300), Depth: 15.30cm - 23:56:13
+WARPING Center: (211, 300), Depth: 15.28cm - 23:56:13
+WARPING Center: (210, 300), Depth: 15.30cm - 23:56:13
+WARPING Center: (224, 302), Depth: 15.28cm - 23:56:13
+WARPING Center: (210, 299), Depth: 15.30cm - 23:56:13
+WARPING Center: (209, 300), Depth: 0.00cm - 23:56:13
+WARPING Center: (210, 300), Depth: 0.00cm - 23:56:13
+WARPING Center: (211, 301), Depth: 0.00cm - 23:56:13
+WARPING Center: (225, 303), Depth: 0.00cm - 23:56:13
+WARPING Center: (209, 300), Depth: 0.00cm - 23:56:13
+WARPING Center: (208, 300), Depth: 0.00cm - 23:56:13
+WARPING Center: (207, 301), Depth: 0.00cm - 23:56:13
+WARPING Center: (207, 300), Depth: 0.00cm - 23:56:13
+WARPING Center: (224, 307), Depth: 0.00cm - 23:56:13
+WARPING Center: (208, 300), Depth: 0.00cm - 23:56:14
+WARPING Center: (208, 300), Depth: 0.00cm - 23:56:14
+WARPING Center: (218, 306), Depth: 15.08cm - 23:56:14
+WARPING Center: (207, 300), Depth: 15.05cm - 23:56:14
+WARPING Center: (204, 301), Depth: 14.98cm - 23:56:14
+WARPING Center: (214, 315), Depth: 14.88cm - 23:56:14
+WARPING Center: (211, 313), Depth: 15.00cm - 23:56:14
+WARPING Center: (226, 310), Depth: 14.90cm - 23:56:14
+WARPING Center: (210, 314), Depth: 14.95cm - 23:56:14
+WARPING Center: (227, 311), Depth: 15.23cm - 23:56:14
+WARPING Center: (214, 305), Depth: 15.28cm - 23:56:14
+WARPING Center: (216, 304), Depth: 15.53cm - 23:56:14
+WARPING Center: (225, 304), Depth: 15.73cm - 23:56:14
+WARPING Center: (209, 298), Depth: 15.85cm - 23:56:14
+WARPING Center: (211, 300), Depth: 15.78cm - 23:56:14
+WARPING Center: (222, 302), Depth: 15.83cm - 23:56:15
+WARPING Center: (218, 303), Depth: 15.78cm - 23:56:15
+WARPING Center: (215, 306), Depth: 15.65cm - 23:56:15
+WARPING Center: (222, 316), Depth: 0.00cm - 23:56:15
+WARPING Center: (216, 314), Depth: 0.00cm - 23:56:15
+WARPING Center: (228, 312), Depth: 0.00cm - 23:56:15
+WARPING Center: (215, 310), Depth: 0.00cm - 23:56:15
+WARPING Center: (215, 309), Depth: 0.00cm - 23:56:16
+WARPING Center: (233, 309), Depth: 0.00cm - 23:56:16
+WARPING Center: (213, 308), Depth: 15.83cm - 23:56:16
+WARPING Center: (210, 300), Depth: 16.03cm - 23:56:16
+WARPING Center: (210, 300), Depth: 16.03cm - 23:56:16
+WARPING Center: (208, 300), Depth: 16.03cm - 23:56:16
+WARPING Center: (207, 300), Depth: 16.05cm - 23:56:16
+WARPING Center: (217, 304), Depth: 16.00cm - 23:56:16
+WARPING Center: (206, 298), Depth: 16.00cm - 23:56:16
+WARPING Center: (204, 297), Depth: 15.98cm - 23:56:16
+WARPING Center: (202, 297), Depth: 15.95cm - 23:56:16
+WARPING Center: (203, 298), Depth: 16.03cm - 23:56:16
+WARPING Center: (203, 297), Depth: 16.05cm - 23:56:16
+WARPING Center: (201, 298), Depth: 15.88cm - 23:56:16
+WARPING Center: (201, 298), Depth: 15.88cm - 23:56:16
+WARPING Center: (201, 298), Depth: 15.88cm - 23:56:16
+WARPING Center: (199, 298), Depth: 15.83cm - 23:56:16
+WARPING Center: (200, 298), Depth: 15.85cm - 23:56:16
+WARPING Center: (205, 300), Depth: 15.83cm - 23:56:16
+WARPING Center: (199, 298), Depth: 15.78cm - 23:56:16
+WARPING Center: (200, 299), Depth: 15.88cm - 23:56:17
+WARPING Center: (201, 299), Depth: 15.78cm - 23:56:17
+WARPING Center: (217, 305), Depth: 15.70cm - 23:56:17
+WARPING Center: (202, 298), Depth: 15.78cm - 23:56:17
+WARPING Center: (215, 306), Depth: 15.73cm - 23:56:17
+WARPING Center: (202, 298), Depth: 15.70cm - 23:56:17
+WARPING Center: (205, 299), Depth: 15.80cm - 23:56:17
+WARPING Center: (218, 307), Depth: 15.60cm - 23:56:17
+WARPING Center: (205, 300), Depth: 15.78cm - 23:56:17
+WARPING Center: (204, 299), Depth: 15.78cm - 23:56:17
+WARPING Center: (217, 307), Depth: 15.62cm - 23:56:17
+WARPING Center: (203, 299), Depth: 15.73cm - 23:56:17
+WARPING Center: (202, 298), Depth: 15.60cm - 23:56:17
+WARPING Center: (200, 299), Depth: 15.53cm - 23:56:17
+WARPING Center: (199, 298), Depth: 15.50cm - 23:56:17
+WARPING Center: (210, 307), Depth: 15.53cm - 23:56:17
+WARPING Center: (201, 298), Depth: 15.50cm - 23:56:17
+WARPING Center: (203, 298), Depth: 15.58cm - 23:56:17
+WARPING Center: (202, 299), Depth: 15.68cm - 23:56:17
+WARPING Center: (199, 299), Depth: 15.60cm - 23:56:17
+WARPING Center: (215, 307), Depth: 15.60cm - 23:56:17
+WARPING Center: (199, 298), Depth: 15.58cm - 23:56:18
+WARPING Center: (212, 308), Depth: 15.62cm - 23:56:18
+WARPING Center: (197, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 299), Depth: 0.00cm - 23:56:18
+WARPING Center: (199, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (199, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 298), Depth: 0.00cm - 23:56:18
+WARPING Center: (209, 307), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 299), Depth: 0.00cm - 23:56:18
+WARPING Center: (211, 307), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 299), Depth: 0.00cm - 23:56:18
+WARPING Center: (198, 299), Depth: 15.48cm - 23:56:18
+WARPING Center: (199, 299), Depth: 15.48cm - 23:56:18
+WARPING Center: (211, 308), Depth: 15.45cm - 23:56:18
+WARPING Center: (202, 299), Depth: 15.48cm - 23:56:18
+WARPING Center: (204, 299), Depth: 15.90cm - 23:56:19
+WARPING Center: (201, 299), Depth: 16.03cm - 23:56:19
+WARPING Center: (199, 298), Depth: 16.03cm - 23:56:19
+WARPING Center: (201, 297), Depth: 15.93cm - 23:56:19
+WARPING Center: (171, 299), Depth: 15.48cm - 23:56:20
+WARPING Center: (180, 296), Depth: 15.43cm - 23:56:20
+WARPING Center: (170, 299), Depth: 15.43cm - 23:56:20
+WARPING Center: (169, 299), Depth: 15.48cm - 23:56:20
+WARPING Center: (168, 299), Depth: 15.35cm - 23:56:20
+WARPING Center: (167, 300), Depth: 15.35cm - 23:56:20
+WARPING Center: (172, 299), Depth: 15.35cm - 23:56:20
+WARPING Center: (167, 300), Depth: 15.25cm - 23:56:20
+WARPING Center: (168, 300), Depth: 15.35cm - 23:56:20
+WARPING Center: (167, 300), Depth: 15.35cm - 23:56:20
+WARPING Center: (168, 301), Depth: 15.38cm - 23:56:20
+WARPING Center: (172, 300), Depth: 15.28cm - 23:56:20
+WARPING Center: (166, 301), Depth: 15.35cm - 23:56:20
+WARPING Center: (167, 301), Depth: 15.43cm - 23:56:20
+WARPING Center: (167, 300), Depth: 15.33cm - 23:56:20
+WARPING Center: (168, 301), Depth: 15.28cm - 23:56:20
+WARPING Center: (174, 301), Depth: 15.35cm - 23:56:20
+WARPING Center: (168, 301), Depth: 15.33cm - 23:56:20
+WARPING Center: (168, 300), Depth: 15.28cm - 23:56:20
+WARPING Center: (169, 305), Depth: 15.30cm - 23:56:20
+WARPING Center: (168, 300), Depth: 15.25cm - 23:56:20
+WARPING Center: (168, 300), Depth: 15.28cm - 23:56:20
+WARPING Center: (168, 300), Depth: 15.20cm - 23:56:21
+WARPING Center: (168, 301), Depth: 15.20cm - 23:56:21
+WARPING Center: (173, 306), Depth: 15.23cm - 23:56:21
+WARPING Center: (170, 301), Depth: 15.25cm - 23:56:21
+WARPING Center: (170, 301), Depth: 15.33cm - 23:56:21
+WARPING Center: (168, 301), Depth: 15.35cm - 23:56:21
+WARPING Center: (168, 301), Depth: 15.20cm - 23:56:21
+WARPING Center: (167, 301), Depth: 15.18cm - 23:56:21
+WARPING Center: (168, 301), Depth: 15.20cm - 23:56:21
+WARPING Center: (167, 301), Depth: 15.18cm - 23:56:21
+WARPING Center: (162, 309), Depth: 0.00cm - 23:56:21
+WARPING Center: (168, 301), Depth: 0.00cm - 23:56:21
+WARPING Center: (164, 310), Depth: 0.00cm - 23:56:21
+WARPING Center: (164, 309), Depth: 0.00cm - 23:56:21
+WARPING Center: (166, 307), Depth: 0.00cm - 23:56:21
+WARPING Center: (169, 300), Depth: 0.00cm - 23:56:21
+WARPING Center: (170, 302), Depth: 0.00cm - 23:56:22
+WARPING Center: (170, 309), Depth: 15.23cm - 23:56:22
+WARPING Center: (172, 310), Depth: 15.03cm - 23:56:22
+WARPING Center: (170, 312), Depth: 15.08cm - 23:56:22
+WARPING Center: (171, 311), Depth: 15.03cm - 23:56:22
+WARPING Center: (171, 312), Depth: 15.10cm - 23:56:22
+WARPING Center: (172, 313), Depth: 15.05cm - 23:56:22
+WARPING Center: (174, 313), Depth: 15.05cm - 23:56:22
+WARPING Center: (177, 311), Depth: 15.05cm - 23:56:22
+WARPING Center: (174, 315), Depth: 15.00cm - 23:56:22
+WARPING Center: (174, 316), Depth: 14.98cm - 23:56:22
+WARPING Center: (173, 317), Depth: 15.10cm - 23:56:22
+WARPING Center: (173, 318), Depth: 15.03cm - 23:56:22
+
+Session: 10/04/202400:01:00
+STRINGGING - 00:01:09
+STRINGGING - 00:01:09
+STRINGGING - 00:01:09
+STRINGGING - 00:01:09
+
+Session: 10/04/2024 00:02:14
+
+Session: 10/04/202400:03:40
+STRINGGING - 00:03:40
+STRINGGING - 00:03:40
+STRINGGING - 00:03:40
+
+Session: 10/04/2024 00:05:09
+
+Session: 10/04/2024 00:06:11
+
+Session: 10/04/2024 00:06:24
+
+Session: 10/04/2024 00:06:45
+
+Session: 10/04/2024 00:09:41
+
+Session: 10/04/2024 00:09:59
+UNDER EXTRUSION Center: (208, 322), Depth: 29.30cm - 00:10:02
+UNDER EXTRUSION Center: (208, 325), Depth: 29.58cm - 00:10:02
+UNDER EXTRUSION Center: (217, 321), Depth: 29.18cm - 00:10:02
+UNDER EXTRUSION Center: (208, 327), Depth: 29.13cm - 00:10:02
+UNDER EXTRUSION Center: (208, 339), Depth: 29.50cm - 00:10:03
+UNDER EXTRUSION Center: (211, 339), Depth: 29.60cm - 00:10:03
+UNDER EXTRUSION Center: (205, 330), Depth: 29.53cm - 00:10:03
+UNDER EXTRUSION Center: (210, 324), Depth: 29.10cm - 00:10:03
+UNDER EXTRUSION Center: (208, 326), Depth: 29.23cm - 00:10:03
+UNDER EXTRUSION Center: (207, 322), Depth: 29.18cm - 00:10:03
+UNDER EXTRUSION Center: (211, 319), Depth: 28.93cm - 00:10:03
+UNDER EXTRUSION Center: (205, 320), Depth: 29.10cm - 00:10:03
+UNDER EXTRUSION Center: (211, 317), Depth: 29.40cm - 00:10:03
+UNDER EXTRUSION Center: (207, 315), Depth: 29.68cm - 00:10:03
+UNDER EXTRUSION Center: (220, 321), Depth: 29.75cm - 00:10:03
+UNDER EXTRUSION Center: (216, 319), Depth: 29.58cm - 00:10:03
+UNDER EXTRUSION Center: (208, 329), Depth: 29.90cm - 00:10:03
+UNDER EXTRUSION Center: (208, 326), Depth: 29.55cm - 00:10:03
+UNDER EXTRUSION Center: (208, 330), Depth: 30.28cm - 00:10:03
+WARPING Center: (172, 348), Depth: 17.18cm - 00:10:05
+WARPING Center: (214, 360), Depth: 0.00cm - 00:10:09
+WARPING Center: (219, 364), Depth: 0.00cm - 00:10:09
+WARPING Center: (220, 367), Depth: 0.00cm - 00:10:09
+WARPING Center: (221, 367), Depth: 0.00cm - 00:10:09
+WARPING Center: (218, 368), Depth: 0.00cm - 00:10:09
+WARPING Center: (218, 368), Depth: 0.00cm - 00:10:09
+WARPING Center: (223, 368), Depth: 0.00cm - 00:10:09
+WARPING Center: (218, 366), Depth: 0.00cm - 00:10:10
+WARPING Center: (218, 368), Depth: 0.00cm - 00:10:10
+WARPING Center: (215, 366), Depth: 0.00cm - 00:10:10
+WARPING Center: (213, 366), Depth: 0.00cm - 00:10:10
+WARPING Center: (206, 371), Depth: 0.00cm - 00:10:10
+WARPING Center: (207, 372), Depth: 0.00cm - 00:10:10
+WARPING Center: (206, 372), Depth: 0.00cm - 00:10:10
+WARPING Center: (204, 372), Depth: 0.00cm - 00:10:10
+WARPING Center: (204, 374), Depth: 0.00cm - 00:10:10
+WARPING Center: (221, 373), Depth: 0.00cm - 00:10:10
+WARPING Center: (205, 377), Depth: 0.00cm - 00:10:11
+WARPING Center: (220, 371), Depth: 0.00cm - 00:10:11
+WARPING Center: (217, 369), Depth: 0.00cm - 00:10:11
+WARPING Center: (214, 364), Depth: 0.00cm - 00:10:11
+WARPING Center: (212, 366), Depth: 0.00cm - 00:10:11
+WARPING Center: (213, 367), Depth: 0.00cm - 00:10:11
+WARPING Center: (212, 368), Depth: 0.00cm - 00:10:11
+WARPING Center: (211, 368), Depth: 0.00cm - 00:10:12
+WARPING Center: (210, 368), Depth: 0.00cm - 00:10:12
+WARPING Center: (209, 368), Depth: 0.00cm - 00:10:12
+WARPING Center: (211, 369), Depth: 0.00cm - 00:10:12
+WARPING Center: (215, 368), Depth: 0.00cm - 00:10:12
+WARPING Center: (221, 369), Depth: 0.00cm - 00:10:12
+WARPING Center: (225, 371), Depth: 13.38cm - 00:10:12
+WARPING Center: (218, 354), Depth: 9.13cm - 00:10:13
+STRINGGING Center: (488, 265), Depth: 35.65cm - 00:10:17
+WARPING Center: (397, 324), Depth: 28.88cm - 00:10:19
+WARPING Center: (333, 352), Depth: 23.33cm - 00:10:20
+WARPING Center: (329, 351), Depth: 22.80cm - 00:10:20
+WARPING Center: (351, 362), Depth: 20.75cm - 00:10:20
+WARPING Center: (297, 329), Depth: 18.78cm - 00:10:21
+WARPING Center: (339, 326), Depth: 18.60cm - 00:10:21
+WARPING Center: (333, 326), Depth: 18.03cm - 00:10:21
+SPAGHETTI Center: (528, 78), Depth: 15.45cm - 00:10:21
+WARPING Center: (348, 322), Depth: 0.00cm - 00:10:22
+WARPING Center: (331, 303), Depth: 0.00cm - 00:10:22
+WARPING Center: (338, 309), Depth: 0.00cm - 00:10:22
+WARPING Center: (304, 293), Depth: 0.00cm - 00:10:22
+WARPING Center: (302, 297), Depth: 0.00cm - 00:10:22
+WARPING Center: (298, 280), Depth: 0.00cm - 00:10:22
+WARPING Center: (298, 277), Depth: 0.00cm - 00:10:23
+WARPING Center: (295, 275), Depth: 0.00cm - 00:10:23
+WARPING Center: (270, 277), Depth: 0.00cm - 00:10:23
+WARPING Center: (296, 272), Depth: 0.00cm - 00:10:23
+WARPING Center: (275, 275), Depth: 0.00cm - 00:10:23
+WARPING Center: (297, 271), Depth: 0.00cm - 00:10:23
+WARPING Center: (297, 271), Depth: 0.00cm - 00:10:23
+WARPING Center: (297, 272), Depth: 0.00cm - 00:10:23
+WARPING Center: (278, 272), Depth: 0.00cm - 00:10:23
+WARPING Center: (304, 280), Depth: 19.65cm - 00:10:23
+WARPING Center: (286, 275), Depth: 19.58cm - 00:10:23
+WARPING Center: (304, 279), Depth: 19.55cm - 00:10:23
+WARPING Center: (286, 272), Depth: 19.48cm - 00:10:23
+WARPING Center: (304, 279), Depth: 19.35cm - 00:10:23
+WARPING Center: (303, 279), Depth: 19.43cm - 00:10:23
+WARPING Center: (285, 273), Depth: 19.38cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.45cm - 00:10:23
+WARPING Center: (304, 279), Depth: 19.40cm - 00:10:23
+WARPING Center: (284, 273), Depth: 19.38cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.35cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.38cm - 00:10:23
+WARPING Center: (287, 274), Depth: 19.43cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.33cm - 00:10:23
+WARPING Center: (304, 279), Depth: 19.35cm - 00:10:23
+WARPING Center: (289, 274), Depth: 19.38cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.30cm - 00:10:23
+WARPING Center: (305, 279), Depth: 19.30cm - 00:10:23
+WARPING Center: (293, 272), Depth: 19.40cm - 00:10:24
+WARPING Center: (306, 280), Depth: 19.45cm - 00:10:24
+WARPING Center: (286, 275), Depth: 19.40cm - 00:10:24
+WARPING Center: (305, 280), Depth: 19.45cm - 00:10:24
+WARPING Center: (306, 280), Depth: 19.35cm - 00:10:24
+WARPING Center: (305, 279), Depth: 19.35cm - 00:10:24
+WARPING Center: (289, 273), Depth: 19.48cm - 00:10:24
+WARPING Center: (304, 278), Depth: 19.38cm - 00:10:24
+WARPING Center: (288, 274), Depth: 19.40cm - 00:10:24
+WARPING Center: (305, 278), Depth: 19.38cm - 00:10:24
+WARPING Center: (306, 278), Depth: 19.45cm - 00:10:24
+WARPING Center: (342, 268), Depth: 19.28cm - 00:10:24
+WARPING Center: (343, 269), Depth: 19.43cm - 00:10:24
+WARPING Center: (298, 274), Depth: 19.45cm - 00:10:24
+WARPING Center: (295, 274), Depth: 19.50cm - 00:10:24
+WARPING Center: (296, 273), Depth: 19.55cm - 00:10:24
+WARPING Center: (304, 280), Depth: 19.48cm - 00:10:24
+WARPING Center: (343, 268), Depth: 19.33cm - 00:10:24
+WARPING Center: (291, 270), Depth: 19.58cm - 00:10:24
+WARPING Center: (291, 269), Depth: 19.58cm - 00:10:24
+WARPING Center: (284, 274), Depth: 19.55cm - 00:10:24
+WARPING Center: (290, 269), Depth: 19.50cm - 00:10:25
+WARPING Center: (287, 269), Depth: 19.55cm - 00:10:25
+WARPING Center: (288, 269), Depth: 19.55cm - 00:10:25
+WARPING Center: (287, 267), Depth: 19.50cm - 00:10:25
+WARPING Center: (291, 270), Depth: 19.48cm - 00:10:25
+WARPING Center: (287, 268), Depth: 19.58cm - 00:10:25
+WARPING Center: (286, 268), Depth: 19.60cm - 00:10:25
+WARPING Center: (285, 266), Depth: 19.65cm - 00:10:25
+WARPING Center: (283, 265), Depth: 19.58cm - 00:10:25
+WARPING Center: (283, 261), Depth: 19.48cm - 00:10:25
+WARPING Center: (287, 267), Depth: 19.48cm - 00:10:25
+WARPING Center: (287, 266), Depth: 19.45cm - 00:10:25
+WARPING Center: (286, 264), Depth: 19.40cm - 00:10:25
+WARPING Center: (285, 265), Depth: 19.38cm - 00:10:25
+WARPING Center: (285, 261), Depth: 19.08cm - 00:10:25
+WARPING Center: (279, 268), Depth: 19.03cm - 00:10:25
+WARPING Center: (280, 269), Depth: 18.68cm - 00:10:25
+WARPING Center: (293, 275), Depth: 17.85cm - 00:10:25
+WARPING Center: (289, 295), Depth: 17.08cm - 00:10:26
+WARPING Center: (292, 321), Depth: 16.15cm - 00:10:26
+WARPING Center: (295, 327), Depth: 15.62cm - 00:10:26
+WARPING Center: (303, 329), Depth: 0.00cm - 00:10:28
+WARPING Center: (306, 327), Depth: 0.00cm - 00:10:28
+WARPING Center: (307, 326), Depth: 0.00cm - 00:10:28
+WARPING Center: (288, 317), Depth: 0.00cm - 00:10:28

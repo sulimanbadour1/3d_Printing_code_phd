@@ -15,7 +15,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Yolo Files Initalization
-folderpath = "computer_vision\pyCode\models_april\eight_april\obj.names"
+folderpath = "computer_vision/pyCode/Models/Best/36_epoch/obj.names"
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -23,9 +23,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 modelConfiguration = (
-    "computer_vision\pyCode\models_april\eight_april\custom-yolov4-tiny-detector.cfg"
+    "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector.cfg"
 )
-modelWeight = "computer_vision\pyCode\models_april\eight_april\custom-yolov4-tiny-detector_best.weights"
+modelWeight = "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector_best.weights"
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
 
 # To run YOLO Models on GPU
@@ -57,8 +57,8 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.2
-    nmsThreshold = 1
+    confThreshold = 0.1
+    nmsThreshold = 0.4
 
     for output in detection:
         for det in output:
@@ -107,12 +107,19 @@ def analyze_image_from_path(filepath):
         print(f"Error: Unable to load the image from the path: {filepath}")
         return
 
-    imgHeight, imgWidth, channels = img.shape
+    # Resize the image to the fixed dimensions (416x416)
+    img = cv2.resize(img, (800, 800))
 
+    # Convert the image to RGB (from BGR, which is OpenCV's default color format)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    # Detect objects in the image
     findObjects(img)
+
+    # Convert the image back to BGR for display purposes
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
+    # Display the resulting image
     cv2.imshow("Image", img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
@@ -120,5 +127,5 @@ def analyze_image_from_path(filepath):
 
 # Static path to the image
 # image_filepath = "YOUR_STATIC_IMAGE_PATH_HERE"  # Replace this with your actual path
-image_filepath = "computer_vision\pyCode\samples\img\sample_seven.jpg"
+image_filepath = "computer_vision\pyCode\samples\img\sample_six.jpg"
 analyze_image_from_path(image_filepath)

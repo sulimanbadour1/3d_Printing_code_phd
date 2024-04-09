@@ -4,6 +4,12 @@ from datetime import datetime
 import time
 import os
 
+# Assuming the real object height and camera focal length are known for demonstration
+REAL_OBJECT_HEIGHT = 1.75  # meters (example for a person)
+CAMERA_FOCAL_LENGTH_PX = (
+    800  # example value, this needs to be calibrated for your camera
+)
+
 # Initialization of time values and output file setup
 now = datetime.now()
 timestr = now.strftime("%H:%M:%S")
@@ -16,40 +22,17 @@ with open(filename, "a") as f:
 print("Data output initialization complete. Writing to:", filename)
 
 # Yolo Files Initialization
-folderpath = "computer_vision/pyCode/models_april/eight_april/obj.names"
+folderpath = "computer_vision/pyCode/Models/Best/4k_Dataset/obj.names"
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
+
 print("Loading Yolo Models")
 
 modelConfiguration = (
-    "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg"
+    "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector.cfg"
 )
-modelWeight = "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights"
-
-
-# -------------- April Models +++ the best
-# "name": "April Model eight",
-#         "cfg": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/models_april/eight_april/obj.names",
-
-# -------------- April Models +++ Warping
-# weight file -----   computer_vision\pyCode\models_april\custom-yolov4-tiny-detector_best.weights
-## conf file -----    computer_vision\pyCode\models_april\custom-yolov4-tiny-detector.cfg
-## names file -----   computer_vision\pyCode\models_april\obj.names
-
-
-# ----------- March Models --- best without warping
-# weight file -----  computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
-## conf file -----    computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_last.weights
-## names file -----   computer_vision\pyCode\Models_march\obj.names
-
-# ------------ October Models --- without warping
-# computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights
-## conf file -----    computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg
-## names file -----    computer_vision\pyCode\Models\obj.names
-
+modelWeight = "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector_best.weights"
 
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
 model.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
@@ -69,7 +52,7 @@ def calculate_distance(
     return distance
 
 
-def recordData(name, x, y, w, h, distance=0.1):
+def recordData(name, x, y, w, h, distance):
     """
     Record detected object data and estimated distance.
     """
@@ -77,11 +60,9 @@ def recordData(name, x, y, w, h, distance=0.1):
     with open(filename, "a") as f:
         timecurr = str(currnow.strftime("%H:%M:%S"))
         f.write(
-            f"{name} - Coordinates: ({x}, {y}), Size: ({w}x{h}), Distance: {distance if distance is not None else 'N/A'}m - {timecurr}\n"
+            f"{name} - Coordinates: ({x}, {y}), Size: ({w}x{h}), Distance: {distance:.2f}m - {timecurr}\n"
         )
-    print(
-        f"Detected: {name} at ({x}, {y}), Size: ({w}x{h}), Distance: {distance if distance is not None else 'N/A'}m"
-    )
+    print(f"Detected: {name} at ({x}, {y}), Size: ({w}x{h}), Distance: {distance:.2f}m")
 
 
 def findObjects(img):
@@ -89,10 +70,8 @@ def findObjects(img):
 
     blob = cv2.dnn.blobFromImage(img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
-
     outputNames = model.getUnconnectedOutLayersNames()
-
-    detection = model.forward(outputNames)
+    detections = model.forward(outputNames)
 
     hT, wT, cT = img.shape
     bbox = []
@@ -102,8 +81,8 @@ def findObjects(img):
     confThreshold = 0.4
     nmsThreshold = 0.5
 
-    for output in detection:
-        for det in output:
+    for detection in detections:
+        for det in detection:
             scores = det[5:]
             classId = np.argmax(scores)
             confidence = scores[classId]
@@ -115,30 +94,41 @@ def findObjects(img):
                 confs.append(float(confidence))
 
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
-    indices = np.array(indices).flatten()
+    if isinstance(indices, tuple):
+        indices = []
+    else:
+        indices = indices.flatten()
 
     for i in indices:
-        box = bbox[i]
-        x, y, w, h = box[0], box[1], box[2], box[3]
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
-        cv2.putText(
-            img,
-            f"{classNames[classIds[i]].upper()}",
-            (x, y - 10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            1,
-            (0, 255, 0),
-            3,
+        x, y, w, h = bbox[i]
+        label = classNames[classIds[i]].upper()
+        confidence = f"{confs[i]*100:.2f}%"
+        distance = calculate_distance(REAL_OBJECT_HEIGHT, h, CAMERA_FOCAL_LENGTH_PX)
+        text = f"{label} {confidence} {distance:.2f}m"
+        # Draw bounding box and label
+
+        text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)[0]
+        text_x1 = x
+        text_y1 = y - 10 - text_size[1]
+        text_x2 = x + text_size[0]
+        text_y2 = y - 10
+        cv2.rectangle(
+            img, (text_x1, text_y1), (text_x2, text_y2), (0, 0, 0), cv2.FILLED
         )
-    # Now passing the required arguments to recordData
-    recordData(classNames[classIds[i]].upper(), x, y, w, h)
+        # Choose a contrasting color like white or red for the text
+        cv2.putText(
+            img, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2
+        )
+        # Draw the bounding box with increased thickness
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
+
+        recordData(label, x, y, w, h, distance)
 
     end_time = time.time()
-    elapsed_time = end_time - start_time
-    fps = 1 / elapsed_time
-    cv2.putText(
-        img, str(round(fps, 2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
-    )
+    fps = 1 / (end_time - start_time)
+    # cv2.putText(
+    #   img, f"FPS: {fps:.2f}", (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2
+    # )
 
 
 def analyze_image_from_path(filepath):
@@ -147,27 +137,38 @@ def analyze_image_from_path(filepath):
         print(f"Error: Unable to load the image from the path: {filepath}")
         return
 
+    # If the image is larger than a specific size, resize it to fit the screen while maintaining the aspect ratio.
+    screen_res = 1280, 720  # Example screen resolution. Adjust as necessary.
+    scale_width = screen_res[0] / img.shape[1]
+    scale_height = screen_res[1] / img.shape[0]
+    scale = min(scale_width, scale_height)
+
+    # Resized dimensions
+    window_width = int(img.shape[1] * scale)
+    window_height = int(img.shape[0] * scale)
+
+    # Maintain aspect ratio by resizing the image
+    img = cv2.resize(img, (window_width, window_height))
+
+    # Convert to RGB for processing
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     findObjects(img)
+
+    # Convert back to BGR for displaying
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
     # Create a named window that can be manually resized
     cv2.namedWindow("Detected Objects with Distance", cv2.WINDOW_NORMAL)
 
-    # Set the window to a fixed size for initial display
-    cv2.resizeWindow("Detected Objects with Distance", 416, 416)
+    # Set the window to the size of the resized image
+    cv2.resizeWindow("Detected Objects with Distance", window_width, window_height)
 
     # Display the processed image with detections and distance estimations
     cv2.imshow("Detected Objects with Distance", img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    # Optionally, save the image with detections to disk
-    # result_img_path = os.path.join(filenamepath, "detected_objects.jpg")
-    # cv2.imwrite(result_img_path, img)
-    # print(f"Image saved to {result_img_path}")
-
 
 # Example use with a static path to an image for testing
-image_filepath = "computer_vision/pyCode/models_compare/img/three.jpg"
+image_filepath = "computer_vision/pyCode/samples/img/pic (6).jpg"
 analyze_image_from_path(image_filepath)
