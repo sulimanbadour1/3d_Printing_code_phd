@@ -18,7 +18,7 @@ print("Initializing Data Output")
 cam = cv2.VideoCapture(0)
 
 # Yolo Files Initalization
-folderpath = "computer_vision\pyCode\Models\obj.names"
+folderpath = "computer_vision\pyCode\Models\October\obj.names"
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
@@ -27,11 +27,15 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
-modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg"
+modelConfiguration = (
+    "computer_vision\pyCode\Models\October\custom-yolov4-tiny-detector.cfg"
+)
 # modelWeight = (
 #     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
 # )
-modelWeight = "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights"
+modelWeight = (
+    "computer_vision\pyCode\Models\October\custom-yolov4-tiny-detector_best.weights"
+)
 
 
 # -------------- April Models +++ Warping

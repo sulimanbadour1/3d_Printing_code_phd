@@ -1,6 +1,6 @@
 Model: April Model eight
-Average Inference Time: 0.0650 seconds
-Total Detections: 8
-Detection Times: 0.0650s
-Detected Classes: Spaghetti, Blobs
+Average Inference Time: 0.0680 seconds
+Total Detections: 1
+Detection Times: 0.0680s
+Detected Classes: Spaghetti
 

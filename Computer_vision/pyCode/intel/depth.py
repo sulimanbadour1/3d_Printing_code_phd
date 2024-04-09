@@ -71,7 +71,7 @@ align = rs.align(align_to)
 
 # Load the YOLO model
 # Yolo Files Initialization
-folderpath = "computer_vision/pyCode/models_april/first_of_april/obj.names"
+folderpath = "computer_vision/pyCode/Models/April/eight_april/obj.names"
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -79,9 +79,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 modelConfiguration = (
-    "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg"
+    "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector.cfg"
 )
-modelWeight = "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights"
+modelWeight = "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector_best.weights"
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)

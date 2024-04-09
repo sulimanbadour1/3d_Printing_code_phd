@@ -259,3 +259,18 @@ Session: 08/04/2024 17:36:34
 Session: 08/04/2024 17:36:58
 
 Session: 08/04/2024 17:37:06
+
+Session: 08/04/2024 18:04:07
+
+Session: 08/04/2024 18:04:37
+
+Session: 08/04/2024 18:05:32
+
+Session: 08/04/2024 18:05:53
+SPAGHETTI - Coordinates: (56, 11), Size: (640x429), Distance: N/Am - 18:05:54
+
+Session: 08/04/2024 18:06:45
+SPAGHETTI - Coordinates: (56, 11), Size: (640x429), Distance: N/Am - 18:06:46
+
+Session: 08/04/2024 18:07:06
+SPAGHETTI - Coordinates: (56, 11), Size: (640x429), Distance: 0.1m - 18:07:07

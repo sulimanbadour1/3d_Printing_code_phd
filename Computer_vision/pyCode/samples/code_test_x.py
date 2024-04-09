@@ -16,18 +16,16 @@ with open(filename, "a") as f:
 print("Data output initialization complete. Writing to:", filename)
 
 # Yolo Files Initialization
-folderpath = "computer_vision\pyCode\Models_march\obj.names"
+folderpath = "computer_vision/pyCode/models_april/eight_april/obj.names"
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 print("Loading Yolo Models")
 
 modelConfiguration = (
-    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector.cfg"
+    "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector.cfg"
 )
-modelWeight = (
-    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
-)
+modelWeight = "computer_vision/pyCode/models_april/eight_april/custom-yolov4-tiny-detector_best.weights"
 
 
 # -------------- April Models +++ the best
@@ -71,7 +69,7 @@ def calculate_distance(
     return distance
 
 
-def recordData(name, x, y, w, h, distance=None):
+def recordData(name, x, y, w, h, distance=0.1):
     """
     Record detected object data and estimated distance.
     """
@@ -120,7 +118,6 @@ def findObjects(img):
     indices = np.array(indices).flatten()
 
     for i in indices:
-        i = i
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
@@ -133,7 +130,8 @@ def findObjects(img):
             (0, 255, 0),
             3,
         )
-        recordData(classNames[classIds[i]].upper())
+    # Now passing the required arguments to recordData
+    recordData(classNames[classIds[i]].upper(), x, y, w, h)
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -157,7 +155,7 @@ def analyze_image_from_path(filepath):
     cv2.namedWindow("Detected Objects with Distance", cv2.WINDOW_NORMAL)
 
     # Set the window to a fixed size for initial display
-    cv2.resizeWindow("Detected Objects with Distance", 800, 600)
+    cv2.resizeWindow("Detected Objects with Distance", 416, 416)
 
     # Display the processed image with detections and distance estimations
     cv2.imshow("Detected Objects with Distance", img)
