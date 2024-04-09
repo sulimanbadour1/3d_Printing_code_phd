@@ -6,29 +6,41 @@ import matplotlib.pyplot as plt
 # Define your model configurations
 model_configurations = [
     {
+        "name": "April Best 4k dataset",
+        "cfg": "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/Models/Best/4k_Dataset/obj.names",
+    },
+    {
+        "name": "April 36K Epochs",
+        "cfg": "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/Models/Best/36_epoch/obj.names",
+    },
+    {
         "name": "April Model eight",
         "cfg": "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector.cfg",
         "weights": "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector_best.weights",
         "names": "computer_vision/pyCode/Models/April/eight_april/obj.names",
     },
-    # {
-    #     "name": "April Model the first",
-    #     "cfg": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
-    #     "weights": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
-    #     "names": "computer_vision/pyCode/models_april/first_of_april/obj.names",
-    # },
-    # {
-    #     "name": "March Model",
-    #     "cfg": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
-    #     "weights": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
-    #     "names": "computer_vision/pyCode/Models_march/obj.names",
-    # },
-    # {
-    #     "name": "October Model",
-    #     "cfg": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
-    #     "weights": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
-    #     "names": "computer_vision/pyCode/Models/obj.names",
-    # },
+    {
+        "name": "April Model the first",
+        "cfg": "computer_vision/pyCode/Models/April/first_of_april/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/Models/April/first_of_april/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/Models/April/first_of_april/obj.names",
+    },
+    {
+        "name": "March Model",
+        "cfg": "computer_vision/pyCode/Models/March/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/Models/March/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/Models/March/obj.names",
+    },
+    {
+        "name": "October Model",
+        "cfg": "computer_vision/pyCode/Models/October/custom-yolov4-tiny-detector.cfg",
+        "weights": "computer_vision/pyCode/Models/October/custom-yolov4-tiny-detector_best.weights",
+        "names": "computer_vision/pyCode/Models/October/obj.names",
+    },
 ]
 
 
@@ -60,9 +72,6 @@ def post_process(
             class_id = np.argmax(scores)
             confidence = scores[class_id]
             if confidence > confidence_threshold:
-                detected_class_names.append(
-                    classes[class_id]
-                )  # Add class name to the list
                 center_x = int(detection[0] * img_width)
                 center_y = int(detection[1] * img_height)
                 w = int(detection[2] * img_width)
@@ -72,14 +81,24 @@ def post_process(
                 boxes.append([x, y, w, h])
                 confidences.append(float(confidence))
                 class_ids.append(class_id)
+                detected_class_names.append(classes[class_id])
 
     # Apply Non-Maximum Suppression
     indices = cv2.dnn.NMSBoxes(boxes, confidences, confidence_threshold, nms_threshold)
 
-    final_boxes = [boxes[i] for i in indices.flatten()]
-    final_confidences = [confidences[i] for i in indices.flatten()]
-    final_class_ids = [class_ids[i] for i in indices.flatten()]
-    final_detected_class_names = [detected_class_names[i] for i in indices.flatten()]
+    if len(indices) == 0:  # Check if no boxes were kept
+        return [], [], [], []
+
+    # Fix for handling different OpenCV versions output
+    if type(indices) is tuple:  # Handling OpenCV output as tuple
+        indices = indices[0]
+
+    indices = np.array(indices).flatten()  # Ensuring it is flat
+
+    final_boxes = [boxes[i] for i in indices]
+    final_confidences = [confidences[i] for i in indices]
+    final_class_ids = [class_ids[i] for i in indices]
+    final_detected_class_names = [detected_class_names[i] for i in indices]
 
     return final_boxes, final_confidences, final_class_ids, final_detected_class_names
 
