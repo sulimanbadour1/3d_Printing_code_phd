@@ -3,6 +3,16 @@ import cv2
 import numpy as np
 from datetime import datetime
 import time
+from model_config import model_configurations as config
+
+
+### info about the model configurations
+print(
+    f"Using the following model with index",
+    {config[5]["index"]},
+    "and name :",
+    config[5]["name"],
+)
 
 # Initalization of time values
 now = datetime.now()
@@ -18,7 +28,7 @@ print("Initializing Data Output")
 cam = cv2.VideoCapture(0)
 
 # Yolo Files Initalization
-folderpath = "computer_vision\pyCode\Models\October\obj.names"
+folderpath = config[5]["names"]  # YOLO Name Fiile location
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
@@ -26,57 +36,11 @@ with open(folderpath, "rt") as f:
 
 print("Loading Yolo Models")
 
-# modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
-modelConfiguration = (
-    "computer_vision\pyCode\Models\October\custom-yolov4-tiny-detector.cfg"
-)
-# modelWeight = (
-#     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
-# )
-modelWeight = (
-    "computer_vision\pyCode\Models\October\custom-yolov4-tiny-detector_best.weights"
-)
+# YOLO cfg file location
+modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
 
+modelWeight = config[5]["weights"]  # YOLO weight file location
 
-# # Define your model configurations
-# model_configurations = [
-#     {
-#         "name": "April Best 4k dataset",
-#         "cfg": "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/Best/4k_Dataset/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/Best/4k_Dataset/obj.names",
-#     },
-#     {
-#         "name": "April 36K Epochs",
-#         "cfg": "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/Best/36_epoch/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/Best/36_epoch/obj.names",
-#     },
-#     {
-#         "name": "April Model eight",
-#         "cfg": "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/April/eight_april/obj.names",
-#     },
-#     {
-#         "name": "April Model the first",
-#         "cfg": "computer_vision/pyCode/Models/April/first_of_april/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/April/first_of_april/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/April/first_of_april/obj.names",
-#     },
-#     {
-#         "name": "March Model",
-#         "cfg": "computer_vision/pyCode/Models/March/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/March/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/March/obj.names",
-#     },
-#     {
-#         "name": "October Model",
-#         "cfg": "computer_vision/pyCode/Models/October/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/October/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/October/obj.names",
-#     },
-# ]
 
 model = cv2.dnn.readNetFromDarknet(
     modelConfiguration, modelWeight

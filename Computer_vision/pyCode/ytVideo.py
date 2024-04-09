@@ -5,6 +5,15 @@ import os
 import numpy as np
 from datetime import datetime
 import time
+from model_config import model_configurations as config
+
+### info about the model configurations
+print(
+    f"Using the following model with index",
+    {config[5]["index"]},
+    "and name :",
+    config[5]["name"],
+)
 
 
 # Download video from YouTube
@@ -18,7 +27,7 @@ def download_video(url, path="downloaded_videos"):
 
 
 # URL of the YouTube video
-video_url = "https://youtu.be/hQYHQpxmbNE?si=fBP1DQmeGF-06gIk"
+video_url = "https://youtu.be/J_h24R-ytqg?si=jwrCBdNhDcQ_fUqm"
 video_path = download_video(video_url)
 
 # Now, use video_path with cv2.VideoCapture
@@ -36,26 +45,20 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Yolo Files Initalization
-folderpath = "computer_vision\pyCode\Models\obj.names"
+folderpath = config[5]["names"]  # YOLO Name Fiile location
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
-# March 2024
-# computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
-# Original 2024
-# computer_vision\pyCode\Models\custom-yolov4-tiny-detector_best.weights
 
-# modelConfiguration = "Models\\custom-yolov4-tiny-detector.cfg"  # YOLO cfg file location
-modelConfiguration = "computer_vision\pyCode\Models\custom-yolov4-tiny-detector.cfg"
-# modelWeight = (
-#     "Models\\custom-yolov4-tiny-detector_best.weights"  # YOLO weight file location
-# )
-modelWeight = (
-    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
-)
+
+# Yolo cfg file location
+modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
+
+modelWeight = config[5]["weights"]  # YOLO weight file location
+
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(

@@ -2,9 +2,15 @@ import cv2
 import numpy as np
 from datetime import datetime
 import time
+from model_config import model_configurations as config
 
-
-print(cv2.__version__)
+### info about the model configurations
+print(
+    f"Using the following model with index",
+    {config[5]["index"]},
+    "and name :",
+    config[5]["name"],
+)
 
 # Initialization of time values
 now = datetime.now()
@@ -23,24 +29,18 @@ video_path = "downloaded_videos\What causes lines in the middle of a 3d print So
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = "computer_vision/pyCode/Models/obj.names"  # Changed backslashes to forward slashes for consistency
+folderpath = config[5]["names"]  # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
 
-modelConfiguration = "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg"
-modelWeight = (
-    "computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights"
-)
+# Yolo cfg file location
+modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
 
+modelWeight = config[5]["weights"]  # YOLO weight file location
 
-# ----------- March Models
-# computer_vision\pyCode\Models_march\custom-yolov4-tiny-detector_best.weights
-
-# ------------ October Models
-# computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(
