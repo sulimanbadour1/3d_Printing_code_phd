@@ -5,7 +5,7 @@ import time
 import os
 
 # Assuming the real object height and camera focal length are known for demonstration
-REAL_OBJECT_HEIGHT = 1.75  # meters (example for a person)
+REAL_OBJECT_HEIGHT = 0.4  # meters (example for a person)
 CAMERA_FOCAL_LENGTH_PX = (
     800  # example value, this needs to be calibrated for your camera
 )
@@ -126,9 +126,9 @@ def findObjects(img):
 
     end_time = time.time()
     fps = 1 / (end_time - start_time)
-    # cv2.putText(
-    #   img, f"FPS: {fps:.2f}", (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2
-    # )
+    cv2.putText(
+        img, f"FPS: {fps:.2f}", (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2
+    )
 
 
 def analyze_image_from_path(filepath):
@@ -170,5 +170,5 @@ def analyze_image_from_path(filepath):
 
 
 # Example use with a static path to an image for testing
-image_filepath = "computer_vision/pyCode/samples/img/pic (6).jpg"
+image_filepath = "computer_vision/pyCode/samples/img/pic (2).jpg"
 analyze_image_from_path(image_filepath)

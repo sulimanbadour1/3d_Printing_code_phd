@@ -25,11 +25,11 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos\What causes lines in the middle of a 3d print Solve under extrusion problems mid print halfway up!.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/Stop Stringing when 3d printing! How to reduce or solve stringing on a 3d printer -cura or otherwise.mp4"  # Provide the path to your video file here
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = config[5]["names"]  # YOLO Name Fiile location
+folderpath = config[1]["names"]  # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -37,9 +37,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # Yolo cfg file location
-modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
+modelConfiguration = config[1]["cfg"]  # YOLO cfg file location
 
-modelWeight = config[5]["weights"]  # YOLO weight file location
+modelWeight = config[1]["weights"]  # YOLO weight file location
 
 
 # Load the neural network
@@ -80,8 +80,8 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4  # YOLO Confidence Treshold
-    nmsThreshold = 0.5  # lower the more agressive and less boxes
+    confThreshold = 0.1  # YOLO Confidence Treshold
+    nmsThreshold = 0.2  # lower the more agressive and less boxes
 
     for output in detection:
         for det in output:

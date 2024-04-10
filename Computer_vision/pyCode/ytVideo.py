@@ -45,7 +45,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Yolo Files Initalization
-folderpath = config[5]["names"]  # YOLO Name Fiile location
+folderpath = config[0]["names"]  # YOLO Name Fiile location
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
@@ -55,9 +55,9 @@ print("Loading Yolo Models")
 
 
 # Yolo cfg file location
-modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
+modelConfiguration = config[0]["cfg"]  # YOLO cfg file location
 
-modelWeight = config[5]["weights"]  # YOLO weight file location
+modelWeight = config[0]["weights"]  # YOLO weight file location
 
 
 # Load the neural network

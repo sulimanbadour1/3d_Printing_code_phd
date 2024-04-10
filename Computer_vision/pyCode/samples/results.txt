@@ -360,3 +360,26 @@ Session: 10/04/2024 00:03:44
 Session: 10/04/2024 00:03:52
 BLOBS - Coordinates: (34, 198), Size: (191x277), Distance: 5.05m - 00:03:52
 BLOBS - Coordinates: (314, 173), Size: (191x277), Distance: 5.05m - 00:03:52
+
+Session: 10/04/2024 14:20:22
+BLOBS - Coordinates: (34, 198), Size: (191x277), Distance: 5.05m - 14:20:23
+BLOBS - Coordinates: (314, 173), Size: (191x277), Distance: 5.05m - 14:20:23
+
+Session: 10/04/2024 14:21:15
+BLOBS - Coordinates: (34, 198), Size: (191x277), Distance: 5.05m - 14:21:15
+BLOBS - Coordinates: (314, 173), Size: (191x277), Distance: 5.05m - 14:21:15
+
+Session: 10/04/2024 14:21:53
+
+Session: 10/04/2024 14:22:51
+SPAGHETTI - Coordinates: (203, -8), Size: (654x709), Distance: 1.97m - 14:22:51
+
+Session: 10/04/2024 14:22:58
+BLOBS - Coordinates: (34, 198), Size: (191x277), Distance: 5.05m - 14:22:59
+BLOBS - Coordinates: (314, 173), Size: (191x277), Distance: 5.05m - 14:22:59
+
+Session: 10/04/2024 14:23:23
+SPAGHETTI - Coordinates: (457, 126), Size: (476x502), Distance: 2.79m - 14:23:23
+
+Session: 10/04/2024 14:23:45
+SPAGHETTI - Coordinates: (457, 126), Size: (476x502), Distance: 0.64m - 14:23:46
