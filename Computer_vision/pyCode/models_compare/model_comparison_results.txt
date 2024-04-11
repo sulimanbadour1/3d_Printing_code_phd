@@ -1,36 +1,36 @@
 Model: April Best 4k dataset
-Average Inference Time: 0.1286 seconds
-Total Detections: 0
-Detection Times: 0.1286s
-Detected Classes: 
+Average Inference Time: 0.1270 seconds
+Total Detections: 3
+Detection Times: 0.1270s
+Detected Classes: Under Extrusion, Blobs
 
 Model: April 36K Epochs
-Average Inference Time: 0.1130 seconds
-Total Detections: 2
-Detection Times: 0.1130s
-Detected Classes: Under Extrusion, Stringging
+Average Inference Time: 0.1030 seconds
+Total Detections: 4
+Detection Times: 0.1030s
+Detected Classes: Blobs
 
 Model: April Model eight
-Average Inference Time: 0.1050 seconds
-Total Detections: 0
-Detection Times: 0.1050s
-Detected Classes: 
+Average Inference Time: 0.1130 seconds
+Total Detections: 3
+Detection Times: 0.1130s
+Detected Classes: Blobs
 
 Model: April Model the first
-Average Inference Time: 0.1050 seconds
-Total Detections: 2
-Detection Times: 0.1050s
-Detected Classes: Under Extrusion, Stringging
+Average Inference Time: 0.1140 seconds
+Total Detections: 4
+Detection Times: 0.1140s
+Detected Classes: Blobs
 
 Model: March Model
-Average Inference Time: 0.1040 seconds
-Total Detections: 0
-Detection Times: 0.1040s
-Detected Classes: 
+Average Inference Time: 0.1100 seconds
+Total Detections: 3
+Detection Times: 0.1100s
+Detected Classes: Blobs
 
 Model: October Model
-Average Inference Time: 0.1229 seconds
-Total Detections: 0
-Detection Times: 0.1229s
-Detected Classes: 
+Average Inference Time: 0.1020 seconds
+Total Detections: 3
+Detection Times: 0.1020s
+Detected Classes: Under Extrusion, Blobs
 

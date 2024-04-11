@@ -113,7 +113,7 @@ def findObjects(img, depth_frame):
     confs = []
 
     confThreshold = 0.4
-    nmsThreshold = 0.5
+    nmsThreshold = 0.4
 
     for output in detection:
         for det in output:

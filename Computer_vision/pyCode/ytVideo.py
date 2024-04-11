@@ -10,9 +10,9 @@ from model_config import model_configurations as config
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[5]["index"]},
+    {config[0]["index"]},
     "and name :",
-    config[5]["name"],
+    config[0]["name"],
 )
 
 
@@ -27,7 +27,7 @@ def download_video(url, path="downloaded_videos"):
 
 
 # URL of the YouTube video
-video_url = "https://youtu.be/J_h24R-ytqg?si=jwrCBdNhDcQ_fUqm"
+video_url = "https://youtu.be/6Qp3nTU13dU?si=cdEQ6xUNxy72hp3q"
 video_path = download_video(video_url)
 
 # Now, use video_path with cv2.VideoCapture
@@ -126,21 +126,18 @@ def findObjects(img):
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
 
+        confidence_text = f"{confs[i]:.2f}"  # Converts confidence score to a string with 2 decimal places
+        label = f"{classNames[classIds[i]].upper()} {confidence_text}"  # Label for the detected object
+
         # Draws Bounding Box for every detection and display the detection type
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
         cv2.putText(
-            img,
-            f"{classNames[classIds[i]].upper()}",
-            (x, y - 10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            1,
-            (0, 255, 0),
-            3,
+            img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3
         )
 
         recordData(
-            classNames[classIds[i]].upper()
-        )  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
+            label
+        )  # Now includes confidence in recorded data  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
 
     # FPS Calculation
     end_time = time.time()

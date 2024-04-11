@@ -60,7 +60,7 @@ def detect_objects(model, img):
 
 
 def post_process(
-    outputs, classes, img_width, img_height, confidence_threshold=0.1, nms_threshold=0.1
+    outputs, classes, img_width, img_height, confidence_threshold=0.4, nms_threshold=0.5
 ):
     boxes = []
     confidences = []
@@ -149,15 +149,25 @@ def draw_boxes(img, boxes, confidences, class_ids, classes):
         cv2.putText(img, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
 
-def display_detected_images(detected_images):
-    fig, axs = plt.subplots(1, len(detected_images), figsize=(20, 5))
+def display_detected_images(detected_images, model_names):
+    # Calculate number of rows needed based on number of images, aiming for 3 images per row
+    num_rows = (len(detected_images) + 2) // 3
+    fig, axs = plt.subplots(
+        num_rows, 3, figsize=(20, num_rows * 5)
+    )  # Adjust size based on number of rows
+    fig.subplots_adjust(hspace=0.3)
+
     for i, img in enumerate(detected_images):
-        if len(detected_images) > 1:  # More than one image, use indexed axs
-            axs[i].imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-            axs[i].axis("off")
-        else:  # Single image, axs is not subscriptable
-            axs.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-            axs.axis("off")
+        row = i // 3
+        col = i % 3
+        axs[row, col].imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        axs[row, col].set_title(model_names[i], fontsize=10)  # Set title as model name
+        axs[row, col].axis("off")
+
+    # Hide any unused subplots
+    for i in range(len(detected_images), num_rows * 3):
+        axs[i // 3, i % 3].axis("off")
+
     plt.show()
 
 
@@ -206,20 +216,27 @@ def compare_models_and_document(test_images):
     all_detected_images = (
         []
     )  # Store detected images from all models for side-by-side comparison
+    model_names_for_images = (
+        []
+    )  # Store model names corresponding to each detected image
     results = {}
+
     for config in model_configurations:
         model_result, detected_images = analyze_model_performance(config, test_images)
         results[config["name"]] = model_result
         all_detected_images.extend(
             detected_images
         )  # Assuming one image per model for simplicity
+        model_names_for_images.extend(
+            [config["name"]] * len(detected_images)
+        )  # Store model names for labeling
 
     # Generate plots based on collected data
     generate_plots(results)
 
     display_detected_images(
-        all_detected_images
-    )  # Display all detected images side by side
+        all_detected_images, model_names_for_images
+    )  # Display all detected images side by side with model names
 
     with open(
         "computer_vision/pyCode/models_compare/model_comparison_results.txt", "w"
@@ -238,6 +255,6 @@ def compare_models_and_document(test_images):
             )
 
 
-test_images = ["computer_vision/pyCode/models_compare/img/five.jpg"]
+test_images = ["computer_vision/pyCode/models_compare/img/crack.jpg"]
 
 compare_models_and_document(test_images)

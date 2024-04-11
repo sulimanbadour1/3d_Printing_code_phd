@@ -67,8 +67,8 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4
-    nmsThreshold = 0.5
+    confThreshold = 0.1
+    nmsThreshold = 0.1
 
     for output in detection:
         for det in output:
