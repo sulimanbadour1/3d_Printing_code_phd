@@ -4,6 +4,7 @@ import numpy as np
 import pyrealsense2 as rs
 from datetime import datetime
 import time
+from model_config import model_configurations as config_file
 
 ###### Note : Run the intel depth quality with the pre-set json file in the same folder ######
 
@@ -13,6 +14,14 @@ now = datetime.now()
 timestr = str(now.strftime("%H:%M:%S"))
 date = str(now.strftime("%d/%m/%Y"))
 filename = "results.txt"
+
+
+print(
+    f"Using the following model with index",
+    {config_file[0]["index"]},
+    "and name :",
+    config_file[0]["name"],
+)
 
 with open(filename, "a") as f:
     f.write("\nSession: " + date + " " + timestr + "\n")
@@ -46,42 +55,17 @@ align_to = rs.stream.color
 align = rs.align(align_to)
 
 
-# -------------------------------------------------------- Configuration for YOLO --------------------------------------------------------
-# Define your model configurations
-# model_configurations = [
-#     {
-#         "name": "April Model the first",
-#         "cfg": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/models_april/first_of_april/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/models_april/first_of_april/obj.names",
-#     },
-#     {
-#         "name": "March Model",
-#         "cfg": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models_march/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models_march/obj.names",
-#     },
-#     {
-#         "name": "October Model",
-#         "cfg": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector.cfg",
-#         "weights": "computer_vision/pyCode/Models/custom-yolov4-tiny-detector_best.weights",
-#         "names": "computer_vision/pyCode/Models/obj.names",
-#     },
-# ]
-
 # Load the YOLO model
 # Yolo Files Initialization
-folderpath = "computer_vision/pyCode/Models/April/eight_april/obj.names"
+folderpath = config_file[0]["names"]
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
 
-modelConfiguration = (
-    "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector.cfg"
-)
-modelWeight = "computer_vision/pyCode/Models/April/eight_april/custom-yolov4-tiny-detector_best.weights"
+modelConfiguration = config_file[0]["cfg"]
+modelWeight = config_file[0]["weights"]
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)

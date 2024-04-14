@@ -3,13 +3,15 @@ import numpy as np
 from datetime import datetime
 import time
 from model_config import model_configurations as config
+import os
+import sys
 
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[5]["index"]},
+    {config[3]["index"]},
     "and name :",
-    config[5]["name"],
+    config[3]["name"],
 )
 
 # Initialization of time values
@@ -25,11 +27,16 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/Stop Stringing when 3d printing! How to reduce or solve stringing on a 3d printer -cura or otherwise.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid6.mp4"  # Provide the path to your video file here
+if not os.path.exists(video_path):
+    print("Video file not found. Please provide the correct path.")
+    sys.exit(1)
+
+
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = config[1]["names"]  # YOLO Name Fiile location
+folderpath = config[3]["names"]  # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -37,9 +44,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # Yolo cfg file location
-modelConfiguration = config[1]["cfg"]  # YOLO cfg file location
+modelConfiguration = config[3]["cfg"]  # YOLO cfg file location
 
-modelWeight = config[1]["weights"]  # YOLO weight file location
+modelWeight = config[3]["weights"]  # YOLO weight file location
 
 
 # Load the neural network
@@ -103,12 +110,13 @@ def findObjects(img):
         i = i
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
+        label = f"{classNames[classIds[i]].upper()} {confs[i]*100:.2f}%"
 
         # Draws Bounding Box for every detection and display the detection type
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
         cv2.putText(
             img,
-            f"{classNames[classIds[i]].upper()}",
+            label,
             (x, y - 10),
             cv2.FONT_HERSHEY_SIMPLEX,
             1,
@@ -146,7 +154,7 @@ while True:
 
     # Display the frame and check for 'q' press to exit early
     cv2.imshow("Image", img)
-    if cv2.waitKey(1) & 0xFF == ord("q"):
+    if cv2.waitKey(20) & 0xFF == ord("q"):
         break
 
 cam.release()  # Release the video file

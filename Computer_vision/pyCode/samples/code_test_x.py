@@ -78,8 +78,8 @@ def findObjects(img):
     classIds = []
     confs = []
 
-    confThreshold = 0.4
-    nmsThreshold = 0.5
+    confThreshold = 0.2
+    nmsThreshold = 0
 
     for detection in detections:
         for det in detection:
@@ -170,5 +170,5 @@ def analyze_image_from_path(filepath):
 
 
 # Example use with a static path to an image for testing
-image_filepath = "computer_vision/pyCode/samples/img/pic (2).jpg"
+image_filepath = r"computer_vision\pyCode\samples\img\sample_seven.jpg"
 analyze_image_from_path(image_filepath)

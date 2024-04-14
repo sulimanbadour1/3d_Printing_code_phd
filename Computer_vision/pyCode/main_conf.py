@@ -1,39 +1,19 @@
-from pytube import YouTube
+# Initialization of dependencies
 import cv2
-import os
-
 import numpy as np
 from datetime import datetime
 import time
 from model_config import model_configurations as config
 
+
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[0]["index"]},
+    {config[1]["index"]},
     "and name :",
-    config[0]["name"],
+    config[1]["name"],
 )
 
-
-# Download video from YouTube
-def download_video(url, path="downloaded_videos"):
-    yt = YouTube(url)
-    stream = yt.streams.filter(res="720p").first()  # You can customize the resolution
-    if not os.path.exists(path):
-        os.makedirs(path)
-    stream.download(output_path=path)
-    return os.path.join(path, stream.default_filename)
-
-
-# URL of the YouTube video
-video_url = "https://youtu.be/ZM1MYbsC5Aw?si=Fe3Ca_0B7uj3yFOk"
-video_path = download_video(video_url)
-
-# Now, use video_path with cv2.VideoCapture
-cam = cv2.VideoCapture(video_path)
-
-# The rest of your object detection code follows...
 # Initalization of time values
 now = datetime.now()
 timestr = str(now.strftime("%H:%M:%S"))
@@ -44,8 +24,11 @@ with open(filename, "a") as f:
     f.write("\nSession: " + date + timestr + "\n")
 print("Initializing Data Output")
 
+# Camera Initialization
+cam = cv2.VideoCapture(0)
+
 # Yolo Files Initalization
-folderpath = config[0]["names"]  # YOLO Name Fiile location
+folderpath = config[1]["names"]  # YOLO Name Fiile location
 # folderpath = 'Models\\obj.names'                                    # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
@@ -53,14 +36,12 @@ with open(folderpath, "rt") as f:
 
 print("Loading Yolo Models")
 
+# YOLO cfg file location
+modelConfiguration = config[1]["cfg"]  # YOLO cfg file location
 
-# Yolo cfg file location
-modelConfiguration = config[0]["cfg"]  # YOLO cfg file location
-
-modelWeight = config[0]["weights"]  # YOLO weight file location
+modelWeight = config[1]["weights"]  # YOLO weight file location
 
 
-# Load the neural network
 model = cv2.dnn.readNetFromDarknet(
     modelConfiguration, modelWeight
 )  # Loading of YOLO Models
@@ -84,28 +65,22 @@ def recordData(name):
 
 
 def findObjects(img):
-    start_time = time.time()  # Time initaialization to compute for FPS
+    start_time = time.time()  # Time initialization to compute FPS
 
-    blob = cv2.dnn.blobFromImage(
-        img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False
-    )  # Converts video feed into blobs
+    blob = cv2.dnn.blobFromImage(img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
-
-    # layerNames = model.getLayerNames()
     outputNames = model.getUnconnectedOutLayersNames()  # Used for getting output layers
-
-    # Object Detection Using Yolo
-    detection = model.forward(outputNames)
+    detections = model.forward(outputNames)
 
     hT, wT, cT = img.shape
     bbox = []
     classIds = []
     confs = []
 
-    confThreshold = 0.3  # YOLO Confidence Treshold
-    nmsThreshold = 0.5  # lower the more agressive and less boxes
+    confThreshold = 0.1  # YOLO Confidence Threshold
+    nmsThreshold = 0.2  # Lower value, more aggressive NMS
 
-    for output in detection:
+    for output in detections:
         for det in output:
             scores = det[5:]
             classId = np.argmax(scores)
@@ -120,32 +95,31 @@ def findObjects(img):
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
     indices = np.array(indices).flatten()  # Array list of detected objects
 
-    # Drawing Bounding Box for every detection in indices
     for i in indices:
-        i = i
         box = bbox[i]
-        x, y, w, h = box[0], box[1], box[2], box[3]
-
-        confidence_text = f"{confs[i]:.2f}"  # Converts confidence score to a string with 2 decimal places
-        label = f"{classNames[classIds[i]].upper()} {confidence_text}"  # Label for the detected object
-
-        # Draws Bounding Box for every detection and display the detection type
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
-        cv2.putText(
-            img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3
+        x, y, w, h = box
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        label = (
+            f"{classNames[classIds[i]].upper()} {confs[i]:.2f}%"  # Use confs[i] here
         )
-
-        recordData(
-            label
-        )  # Now includes confidence in recorded data  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
+        cv2.putText(
+            img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2
+        )
+        recordData(label)  # Record detection and time in a text file
 
     # FPS Calculation
     end_time = time.time()
     elapsed_time = end_time - start_time
     fps = 1 / elapsed_time
     cv2.putText(
-        img, str(round(fps, 2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
-    )  # Displays the FPS to the video feed
+        img,
+        f"FPS: {round(fps, 2)}",
+        (30, 50),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,
+        (0, 255, 0),
+        2,
+    )  # Display FPS
 
 
 while True:

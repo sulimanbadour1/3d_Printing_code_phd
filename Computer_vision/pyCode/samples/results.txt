@@ -383,3 +383,18 @@ SPAGHETTI - Coordinates: (457, 126), Size: (476x502), Distance: 2.79m - 14:23:23
 
 Session: 10/04/2024 14:23:45
 SPAGHETTI - Coordinates: (457, 126), Size: (476x502), Distance: 0.64m - 14:23:46
+
+Session: 13/04/2024 02:08:44
+SPAGHETTI - Coordinates: (457, 126), Size: (476x502), Distance: 0.64m - 02:08:44
+
+Session: 14/04/2024 00:56:29
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:56:29
+
+Session: 14/04/2024 00:56:39
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:56:39
+
+Session: 14/04/2024 00:56:44
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:56:44
+
+Session: 14/04/2024 00:58:32
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:58:32
