@@ -1,72 +1,72 @@
 Model: April 2nd 13_4 1st Model
-Average Inference Time: 0.2050 seconds
+Average Inference Time: 0.1240 seconds
 Total Detections: 4
-Detection Times: 0.2050s
+Detection Times: 0.1240s
 Detected Classes: Stringging
 
 Model: April 2nd  13_4 2nd Model
-Average Inference Time: 0.1410 seconds
+Average Inference Time: 0.1060 seconds
 Total Detections: 3
-Detection Times: 0.1410s
+Detection Times: 0.1060s
 Detected Classes: Stringging
 
 Model: April 2nd  13_4 3rd Model
-Average Inference Time: 0.1630 seconds
+Average Inference Time: 0.1010 seconds
 Total Detections: 3
-Detection Times: 0.1630s
+Detection Times: 0.1010s
 Detected Classes: Stringging
 
 Model: April 2nd  13_4 4rth Model
-Average Inference Time: 0.1760 seconds
+Average Inference Time: 0.0990 seconds
 Total Detections: 3
-Detection Times: 0.1760s
+Detection Times: 0.0990s
 Detected Classes: Stringging
 
 Model: April 2nd  13_4 5th Model
-Average Inference Time: 0.1660 seconds
+Average Inference Time: 0.1020 seconds
 Total Detections: 3
-Detection Times: 0.1660s
+Detection Times: 0.1020s
 Detected Classes: Stringging
 
 Model: April Best 4k dataset
-Average Inference Time: 0.1740 seconds
+Average Inference Time: 0.1320 seconds
 Total Detections: 3
-Detection Times: 0.1740s
+Detection Times: 0.1320s
 Detected Classes: Stringging
 
 Model: April 36K Epochs
-Average Inference Time: 0.1610 seconds
+Average Inference Time: 0.1196 seconds
 Total Detections: 4
-Detection Times: 0.1610s
+Detection Times: 0.1196s
 Detected Classes: Stringging
 
 Model: April Model eight
-Average Inference Time: 0.1420 seconds
+Average Inference Time: 0.1158 seconds
 Total Detections: 3
-Detection Times: 0.1420s
+Detection Times: 0.1158s
 Detected Classes: Stringging
 
 Model: April Model the first
-Average Inference Time: 0.1420 seconds
+Average Inference Time: 0.1080 seconds
 Total Detections: 3
-Detection Times: 0.1420s
+Detection Times: 0.1080s
 Detected Classes: Stringging
 
 Model: March 1st Model
-Average Inference Time: 0.1670 seconds
+Average Inference Time: 0.1030 seconds
 Total Detections: 3
-Detection Times: 0.1670s
+Detection Times: 0.1030s
 Detected Classes: Stringging
 
 Model: March 2nd Model
-Average Inference Time: 0.1590 seconds
+Average Inference Time: 0.1110 seconds
 Total Detections: 3
-Detection Times: 0.1590s
+Detection Times: 0.1110s
 Detected Classes: Stringging
 
 Model: October Model
-Average Inference Time: 0.1450 seconds
+Average Inference Time: 0.1100 seconds
 Total Detections: 3
-Detection Times: 0.1450s
+Detection Times: 0.1100s
 Detected Classes: Stringging
 

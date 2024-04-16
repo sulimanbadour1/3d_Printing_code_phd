@@ -9,9 +9,9 @@ import sys
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[3]["index"]},
+    {config[5]["index"]},
     "and name :",
-    config[3]["name"],
+    config[5]["name"],
 )
 
 # Initialization of time values
@@ -27,16 +27,15 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/vid5.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid6.mp4"  # Provide the path to your video file here
 if not os.path.exists(video_path):
     print("Video file not found. Please provide the correct path.")
     sys.exit(1)
 
-
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = config[3]["names"]  # YOLO Name Fiile location
+folderpath = config[5]["names"]  # YOLO Name File location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -44,21 +43,34 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # Yolo cfg file location
-modelConfiguration = config[3]["cfg"]  # YOLO cfg file location
-
-modelWeight = config[3]["weights"]  # YOLO weight file location
-
+modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
+modelWeight = config[5]["weights"]  # YOLO weight file location
 
 # Load the neural network
-model = cv2.dnn.readNetFromDarknet(
-    modelConfiguration, modelWeight
-)  # Loading of YOLO Models
-
-# To run YOLO Models on GPU (make sure your OpenCV is configured with CUDA support)
+model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
 model.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
 model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
-
 print("Yolo Initialization Successful")
+
+
+# Helper function to initialize Kalman Filters
+def initialize_kalman():
+    kf = cv2.KalmanFilter(4, 2)
+    kf.measurementMatrix = np.array([[1, 0, 0, 0], [0, 1, 0, 0]], np.float32)
+    kf.transitionMatrix = np.array(
+        [[1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]], np.float32
+    )
+    kf.processNoiseCov = (
+        np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 5, 0], [0, 0, 0, 5]], np.float32)
+        * 0.03
+    )
+    kf.measurementNoiseCov = np.eye(2, dtype=np.float32) * 10
+    return kf
+
+
+# Kalman Filters storage
+kalman_filters = {}
+kf_id = 0
 
 
 def recordData(name):
@@ -69,28 +81,23 @@ def recordData(name):
 
 
 def findObjects(img):
-    start_time = time.time()  # Time initaialization to compute for FPS
-
-    blob = cv2.dnn.blobFromImage(
-        img, 1 / 255, (416, 416), [0, 0, 0], 1, crop=False
-    )  # Converts video feed into blobs
+    start_time = time.time()
+    blob = cv2.dnn.blobFromImage(img, 1 / 255, (416, 416), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
-
-    # layerNames = model.getLayerNames()
-    outputNames = model.getUnconnectedOutLayersNames()  # Used for getting output layers
-
-    # Object Detection Using Yolo
-    detection = model.forward(outputNames)
+    outputNames = model.getUnconnectedOutLayersNames()
+    detections = model.forward(outputNames)
 
     hT, wT, cT = img.shape
     bbox = []
     classIds = []
     confs = []
 
-    confThreshold = 0.1  # YOLO Confidence Treshold
-    nmsThreshold = 0.3  # lower the more agressive and less boxes
+    confThreshold = 0.1
+    nmsThreshold = 0.5
 
-    for output in detection:
+    global kf_id, kalman_filters
+
+    for output in detections:
         for det in output:
             scores = det[5:]
             classId = np.argmax(scores)
@@ -103,38 +110,38 @@ def findObjects(img):
                 confs.append(float(confidence))
 
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
-    indices = np.array(indices).flatten()  # Array list of detected objects
+    indices = np.array(indices).flatten()
 
-    # Drawing Bounding Box for every detection in indices
     for i in indices:
-        i = i
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
-        label = f"{classNames[classIds[i]].upper()} {confs[i]*100:.2f}%"
+        if i not in kalman_filters:
+            kf = initialize_kalman()
+            kalman_filters[i] = kf
+            kf.statePost = np.array([x, y, 0, 0], dtype=np.float32)
+        kf = kalman_filters[i]
+        kf.correct(np.array([x, y], dtype=np.float32))
+        prediction = kf.predict()
+        pred_x, pred_y = int(prediction[0]), int(prediction[1])
 
-        # Draws Bounding Box for every detection and display the detection type
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
+        cv2.rectangle(img, (pred_x, pred_y), (pred_x + w, pred_y + h), (0, 255, 0), 5)
+        label = f"{classNames[classIds[i]].upper()} {confs[i]*100:.2f}%"
         cv2.putText(
             img,
             label,
-            (x, y - 10),
+            (pred_x, pred_y - 10),
             cv2.FONT_HERSHEY_SIMPLEX,
             1,
             (0, 255, 0),
             3,
         )
+        recordData(classNames[classIds[i]].upper())
 
-        recordData(
-            classNames[classIds[i]].upper()
-        )  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
-
-    # FPS Calculation
-    end_time = time.time()
-    elapsed_time = end_time - start_time
+    elapsed_time = time.time() - start_time
     fps = 1 / elapsed_time
     cv2.putText(
         img, str(round(fps, 2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
-    )  # Displays the FPS to the video feed
+    )
 
 
 # Main loop to process the video file
@@ -143,18 +150,11 @@ while True:
     if not success:
         break  # If no frame is read (end of video), exit the loop
 
-    imgHeight, imgWidth, channels = img.shape
-    # print(img.shape) ## checking the size of video feed
-
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
     findObjects(img)  # Calling of Object Detection Function
-
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
-
-    # Display the frame and check for 'q' press to exit early
     cv2.imshow("Image", img)
-    if cv2.waitKey(10) & 0xFF == ord("q"):
+    if cv2.waitKey(100) & 0xFF == ord("q"):
         break
 
 cam.release()  # Release the video file
