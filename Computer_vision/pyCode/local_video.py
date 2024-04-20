@@ -9,9 +9,9 @@ import sys
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[3]["index"]},
+    {config[6]["index"]},
     "and name :",
-    config[3]["name"],
+    config[6]["name"],
 )
 
 # Initialization of time values
@@ -27,7 +27,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/vid5.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid6.mp4"  # Provide the path to your video file here
 if not os.path.exists(video_path):
     print("Video file not found. Please provide the correct path.")
     sys.exit(1)
@@ -36,7 +36,7 @@ if not os.path.exists(video_path):
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = config[3]["names"]  # YOLO Name Fiile location
+folderpath = config[6]["names"]  # YOLO Name Fiile location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -44,9 +44,9 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # Yolo cfg file location
-modelConfiguration = config[3]["cfg"]  # YOLO cfg file location
+modelConfiguration = config[6]["cfg"]  # YOLO cfg file location
 
-modelWeight = config[3]["weights"]  # YOLO weight file location
+modelWeight = config[6]["weights"]  # YOLO weight file location
 
 
 # Load the neural network
@@ -154,7 +154,7 @@ while True:
 
     # Display the frame and check for 'q' press to exit early
     cv2.imshow("Image", img)
-    if cv2.waitKey(10) & 0xFF == ord("q"):
+    if cv2.waitKey(40) & 0xFF == ord("q"):
         break
 
 cam.release()  # Release the video file
