@@ -9,9 +9,9 @@ import sys
 ### info about the model configurations
 print(
     f"Using the following model with index",
-    {config[5]["index"]},
+    {config[6]["index"]},
     "and name :",
-    config[5]["name"],
+    config[6]["name"],
 )
 
 # Initialization of time values
@@ -27,7 +27,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/vid6.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid.mp4"  # Provide the path to your video file here
 if not os.path.exists(video_path):
     print("Video file not found. Please provide the correct path.")
     sys.exit(1)
@@ -35,7 +35,7 @@ if not os.path.exists(video_path):
 cam = cv2.VideoCapture(video_path)  # Updated to load video file
 
 # Yolo Files Initialization (assuming the paths are correctly specified for your environment)
-folderpath = config[5]["names"]  # YOLO Name File location
+folderpath = config[6]["names"]  # YOLO Name File location
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
@@ -43,8 +43,8 @@ with open(folderpath, "rt") as f:
 print("Loading Yolo Models")
 
 # Yolo cfg file location
-modelConfiguration = config[5]["cfg"]  # YOLO cfg file location
-modelWeight = config[5]["weights"]  # YOLO weight file location
+modelConfiguration = config[6]["cfg"]  # YOLO cfg file location
+modelWeight = config[6]["weights"]  # YOLO weight file location
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
