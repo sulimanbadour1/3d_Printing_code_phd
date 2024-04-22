@@ -19,9 +19,9 @@ filename = "results.txt"
 
 print(
     f"Using the following model with index",
-    {config_file[0]["index"]},
+    {config_file[6]["index"]},
     "and name :",
-    config_file[0]["name"],
+    config_file[6]["name"],
 )
 
 
@@ -59,15 +59,15 @@ align = rs.align(align_to)
 
 # Load the YOLO model
 # Yolo Files Initialization
-folderpath = config_file[0]["names"]
+folderpath = config_file[6]["names"]
 classNames = []
 with open(folderpath, "rt") as f:
     classNames = f.read().rstrip("\n").split("\n")
 
 print("Loading Yolo Models")
 
-modelConfiguration = config_file[0]["cfg"]
-modelWeight = config_file[0]["weights"]
+modelConfiguration = config_file[6]["cfg"]
+modelWeight = config_file[6]["weights"]
 
 # Load the neural network
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeight)
