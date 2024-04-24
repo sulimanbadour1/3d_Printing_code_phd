@@ -27,7 +27,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/vid5.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid.mp4"  # Provide the path to your video file here
 if not os.path.exists(video_path):
     print("Video file not found. Please provide the correct path.")
     sys.exit(1)
@@ -61,34 +61,36 @@ model.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 print("Yolo Initialization Successful")
 
 
-def recordData(name):
+def recordData(name, distance_cm, confidence, bbox, inference_time):
     currnow = datetime.now()
+    x, y, w, h = bbox
     with open(filename, "a") as f:
         timecurr = str(currnow.strftime("%H:%M:%S"))
-        f.write(str(f"{name} - ") + timecurr + "\n")
+        # Record data with added inference time in milliseconds
+        f.write(
+            f"{timecurr} - {name} - Conf: {confidence*100:.2f}% - Inference: {inference_time:.2f}ms - Dist: {distance_cm:.2f}cm - Box: ({x}, {y}, {w}, {h}) \n"
+        )
 
 
 def findObjects(img):
-    start_time = time.time()  # Time initaialization to compute for FPS
+    start_time = time.time()  # Time initialization to compute for FPS
 
-    blob = cv2.dnn.blobFromImage(
-        img, 1 / 255, (416, 416), [0, 0, 0], 1, crop=False
-    )  # Converts video feed into blobs
+    blob = cv2.dnn.blobFromImage(img, 1 / 255, (416, 416), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
-
-    # layerNames = model.getLayerNames()
     outputNames = model.getUnconnectedOutLayersNames()  # Used for getting output layers
 
-    # Object Detection Using Yolo
+    # Time the inference
+    inference_start = time.time()  # Start timing the inference process
     detection = model.forward(outputNames)
+    inference_end = time.time()  # End timing after inference is done
 
     hT, wT, cT = img.shape
     bbox = []
     classIds = []
     confs = []
 
-    confThreshold = 0.1  # YOLO Confidence Treshold
-    nmsThreshold = 0.3  # lower the more agressive and less boxes
+    confThreshold = 0.1  # YOLO Confidence Threshold
+    nmsThreshold = 0.3  # lower the more aggressive and fewer boxes
 
     for output in detection:
         for det in output:
@@ -105,36 +107,38 @@ def findObjects(img):
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
     indices = np.array(indices).flatten()  # Array list of detected objects
 
-    # Drawing Bounding Box for every detection in indices
+    inference_time = (inference_end - inference_start) * 1000  # Convert to milliseconds
+
     for i in indices:
-        i = i
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
-        label = f"{classNames[classIds[i]].upper()} {confs[i]*100:.2f}%"
+        name = classNames[classIds[i]].upper()
+        label = f"{name} {confs[i]*100:.2f}%"
 
-        # Draws Bounding Box for every detection and display the detection type
+        # Estimating distance based on the size of the bounding box (assuming a certain real size)
+        focal_length = 800  # Example focal length
+        known_width = 0.1  # Known width of the object in meters
+        distance = (known_width * focal_length) / w
+        distance_cm = distance * 100  # Convert to centimeters
+
+        label += f" Distance: {distance_cm:.2f}cm"
+
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
         cv2.putText(
-            img,
-            label,
-            (x, y - 10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            1,
-            (0, 255, 0),
-            3,
+            img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3
         )
 
         recordData(
-            classNames[classIds[i]].upper()
-        )  # Calls the RecordData function purposed to record detected fault and the time it happened within a text file
+            name, distance_cm, confs[i], [x, y, w, h], inference_time
+        )  # Record data with inference time
 
     # FPS Calculation
     end_time = time.time()
     elapsed_time = end_time - start_time
     fps = 1 / elapsed_time
     cv2.putText(
-        img, str(round(fps, 2)), (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
-    )  # Displays the FPS to the video feed
+        img, f"FPS: {fps:.2f}", (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2
+    )
 
 
 # Main loop to process the video file
@@ -151,6 +155,7 @@ while True:
     findObjects(img)  # Calling of Object Detection Function
 
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    img = cv2.resize(img, (800, 500))
 
     # Display the frame and check for 'q' press to exit early
     cv2.imshow("Image", img)
