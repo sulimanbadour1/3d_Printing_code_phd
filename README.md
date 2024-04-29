@@ -15,8 +15,13 @@ The detection model underwent training on Google Colab, a cloud-based platform, 
 <!-- - Google Collab Training Notebook: https://colab.research.google.com/drive/17oU-cuJcYoama6hatZi_CREhWnAqBPbl?usp=sharing -->
 
 
-##  Results
+#  Results
+- A **lidar** camera was used to test the system in real-time settings.
 
-After setting up YOLO, the camera feed displays in real-time. Detected faults are marked with bounding boxes showing their respective classes. Simultaneously, detection results are logged into a text file, including session details such as execution date and time.
+- After setting up YOLO, the camera feed displays in real-time. Detected faults are marked with bounding boxes showing their respective classes. Simultaneously, detection results are logged into a text file, including session details such as execution date and time.
 
-![Tracking demo](3d.gif)
+
+- ![Tracking demo](3d.gif)
+- ![system diagram](integration.png)
+
+
