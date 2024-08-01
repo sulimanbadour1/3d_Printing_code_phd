@@ -55,7 +55,17 @@ def recordData(name):
 def findObjects(img):
     blob = cv2.dnn.blobFromImage(img, 1 / 255, (320, 320), [0, 0, 0], 1, crop=False)
     model.setInput(blob)
+
+    # Measure inference time
+    start_time = time.time()
     outputs = model.forward(model.getUnconnectedOutLayersNames())
+    end_time = time.time()
+
+    inference_time = end_time - start_time
+    print(f"Inference time: {inference_time:.4f} seconds")
+
+    with open(filename, "a") as f:
+        f.write(f"Inference time: {inference_time:.4f} seconds\n")
 
     height, width, _ = img.shape
     bbox = []
@@ -101,7 +111,7 @@ def analyze_image_from_path(filepath):
         print(f"Error: Unable to load the image from the path: {filepath}")
         return
 
-    # Resize the image to the fixed dimensions (416x416)
+    # Resize the image to the fixed dimensions (800x800)
     img = cv2.resize(img, (800, 800))
 
     # Convert the image to RGB (from BGR, which is OpenCV's default color format)
