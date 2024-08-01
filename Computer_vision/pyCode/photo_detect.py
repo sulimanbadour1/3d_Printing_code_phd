@@ -61,11 +61,11 @@ def findObjects(img):
     outputs = model.forward(model.getUnconnectedOutLayersNames())
     end_time = time.time()
 
-    inference_time = end_time - start_time
-    print(f"Inference time: {inference_time:.4f} seconds")
+    inference_time_ms = (end_time - start_time) * 1000
+    print(f"Inference time: {inference_time_ms:.4f} ms")
 
     with open(filename, "a") as f:
-        f.write(f"Inference time: {inference_time:.4f} seconds\n")
+        f.write(f"Inference time: {inference_time_ms:.4f} ms\n")
 
     height, width, _ = img.shape
     bbox = []
