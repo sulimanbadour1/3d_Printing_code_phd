@@ -27,7 +27,7 @@ with open(filename, "a") as f:
 print("Initializing Data Output")
 
 # Load local video instead of camera
-video_path = "downloaded_videos/vid.mp4"  # Provide the path to your video file here
+video_path = "downloaded_videos/vid2.mp4"  # Provide the path to your video file here
 if not os.path.exists(video_path):
     print("Video file not found. Please provide the correct path.")
     sys.exit(1)

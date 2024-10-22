@@ -398,3 +398,9 @@ STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:56:4
 
 Session: 14/04/2024 00:58:32
 STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 00:58:32
+
+Session: 22/10/2024 19:09:14
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 19:09:15
+
+Session: 22/10/2024 19:09:23
+STRINGGING - Coordinates: (540, 162), Size: (143x377), Distance: 0.85m - 19:09:23

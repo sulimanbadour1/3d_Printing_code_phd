@@ -27,7 +27,7 @@ def download_video(url, path="downloaded_videos"):
 
 
 # URL of the YouTube video
-video_url = "https://youtu.be/ZM1MYbsC5Aw?si=Fe3Ca_0B7uj3yFOk"
+video_url = r"downloaded_videos\vid2.mp4"
 video_path = download_video(video_url)
 
 # Now, use video_path with cv2.VideoCapture
